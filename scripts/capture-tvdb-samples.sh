@@ -49,7 +49,6 @@ capture() {
 capture search-series '/search?query=breaking%20bad&type=series&limit=5'
 capture search-person '/search?query=bryan%20cranston&type=person&limit=5'
 capture search-company '/search?query=disney%2B&type=company&limit=5'
-capture search-movie '/search?query=el%20camino&type=movie&limit=5'
 capture search-series-by-network '/search?query=star&type=series&network=Disney%2B&limit=10'
 
 # Series (Breaking Bad 81189, House of the Dragon 371572)

@@ -35,7 +35,7 @@ Built (read the code for details):
 Not built yet: `GET`/`DELETE` endpoints and pagination, `TvdbCache`,
 preferences, `summary`, `recommendations` and `metadata` on messages,
 storing failed turns, the tool-free last step, Sentry, rate limiting on our
-own API, movie support, grounding tests. Their design is below.
+own API, grounding tests. Their design is below.
 
 ## Design notes
 

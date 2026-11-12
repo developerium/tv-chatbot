@@ -52,27 +52,26 @@ Client behaviour (see Retries in ARCHITECTURE.md):
 | 1 | `GET /search` | Resolve names to TVDB ids (series, people, companies); series on a network | `search_tvdb`, `search_by_network` |
 | 2 | `GET /series/{id}/extended` | Series details: genres, status, networks, companies, main cast | `get_series_details` |
 | 3 | `GET /series/{id}` | Small series record with `score` (ranking search results) | inside `search_by_network` |
-| 4 | `GET /people/{id}/extended` | A person's other series and movies | `get_person_credits` |
+| 4 | `GET /people/{id}/extended` | A person's other series | `get_person_credits` |
 | 5 | `GET /series/filter` | Discover series by genre and status (e.g. upcoming fantasy) | `discover_series` |
 | 6 | `GET /genres` | Genre name → id lookup | inside `discover_series` |
 | 7 | `GET /series/statuses` | Status name → id lookup | inside `discover_series` |
-| 8 | `GET /movies/filter`, `GET /movies/{id}/extended` | Only if movies are recommended (open question in PLAN.md) | later |
 
 The tools (`src/tvdb/tvdb.tools.ts`) return compact summaries, never these
 payloads, and record every entity they return for the grounding check.
 
 ### 1. `GET /search`
 
-Searches series, movies, people and companies.
+Searches series, people and companies.
 
 | Param | Notes |
 | --- | --- |
 | `query` | **Required** and must be non-empty (verified: missing or blank → `400 "query is required"`). Matches titles, translations and aliases |
-| `type` | `series`, `movie`, `person` or `company` |
-| `year` | Series and movies only |
+| `type` | `series`, `person` or `company` |
+| `year` | Series only |
 | `network` | Network name, e.g. `Disney+` (TV only) |
 | `company` | Company name (original network, production company, studio); broader than `network` |
-| `country`, `language` | 3-letter codes, series and movies only |
+| `country`, `language` | 3-letter codes, series only |
 | `limit`, `offset` | Paging; `page` also works (verified). Max 5,000 results overall (`400` beyond) |
 
 Response items (series), fields we keep: `tvdb_id`, `name`, `year`,
@@ -125,7 +124,7 @@ Person record with every credit in `characters` (268 for Bryan Cranston,
 about 165 KB). Fields we keep:
 
 - Person: `id`, `name`, `birth`, `death`
-- Per credit: `seriesId` or `movieId`, `series.name` / `movie.name`,
+- Per credit: `seriesId`, `series.name`,
   `series.year`, `peopleType`, `name` (character, often `null`),
   `isFeatured`
 

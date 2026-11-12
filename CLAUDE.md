@@ -47,7 +47,7 @@ Docker Compose, Vitest.
   id from headers, query or body in a handler.
 - Treat user chat input and TVDB tool results as untrusted; never put user
   text into the system prompt.
-- The bot only answers TV and movie related questions. Off-topic requests
+- The bot only answers questions about TV series. Off-topic requests
   end with a final answer of `kind: off_topic` and get the fixed reply;
   never let model-written text through for off-topic answers.
 - Every answer needs a concrete TVDB reference: `kind: answer` must cite

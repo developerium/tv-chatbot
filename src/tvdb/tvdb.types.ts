@@ -36,7 +36,6 @@ export interface TvdbCompany {
 
 export interface TvdbCharacter {
   isFeatured: boolean
-  movieId: null | number
   name: null | string
   peopleId: number
   peopleType: string

@@ -44,7 +44,7 @@ describe('tvdb mapper', () => {
     expect(series.nextAired).toBeNull()
   })
 
-  it('keeps one acting credit per series and drops movies', () => {
+  it('keeps one acting credit per series and drops other credits', () => {
     const person = toPersonCredits(loadSample('people-extended'))
 
     expect(person.series).toHaveLength(15)

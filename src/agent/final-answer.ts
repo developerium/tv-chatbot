@@ -25,7 +25,7 @@ export interface AgentReply {
 }
 
 export const OFF_TOPIC_REPLY =
-  'I can only help with TV series and movies, for example recommendations, cast, genres or networks.'
+  'I can only help with TV series, for example recommendations, cast, genres or networks.'
 
 export const NOT_GROUNDED_REPLY =
   "I couldn't back this answer with TVDB data. Please try rephrasing the question."

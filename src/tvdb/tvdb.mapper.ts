@@ -83,7 +83,7 @@ export function toSeriesDetails(series: TvdbSeriesExtended) {
   }
 }
 
-// Acting credits on series only; guest roles and movies are left out.
+// Acting credits on series only; guest roles and other credits are left out.
 export function toPersonCredits(person: TvdbPersonExtended) {
   const series = new Map<
     number,

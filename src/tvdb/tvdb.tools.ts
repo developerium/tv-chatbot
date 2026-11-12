@@ -102,7 +102,7 @@ export class TvdbTools {
   private personCreditsTool() {
     return tool({
       description:
-        "Get a person's acting roles in series by TVDB person id (guest roles and movies left out).",
+        "Get a person's acting roles in series by TVDB person id (guest roles left out).",
       errorFunction: describeToolError,
       execute: async ({ personId }, context?: TvdbToolContext, details?) => {
         const person = await this.tvdb.getPersonCredits(
