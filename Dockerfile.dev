@@ -1,0 +1,14 @@
+# Development image: dependencies are installed here, the source is
+# bind-mounted by compose.yaml and reloaded on change.
+FROM node:24-alpine
+
+# Run as the image's node user (uid 1000) so files the app writes into the
+# mounted project, like dist/, stay owned by the developer.
+WORKDIR /app
+RUN chown node:node /app
+USER node
+
+COPY --chown=node:node package.json package-lock.json ./
+RUN npm ci
+
+CMD ["npm", "run", "start:dev"]

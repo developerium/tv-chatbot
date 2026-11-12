@@ -1,0 +1,774 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "objectID": "series-393190",
+      "country": "usa",
+      "id": "series-393190",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/series/393190/posters/6139de458f13b.jpg",
+      "name": "Star Wars: Visions",
+      "first_air_time": "2021-09-22",
+      "overview": "This anthology of animated shorts from around the world celebrates the mythos of Star Wars through unique cultural lenses.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Continuing",
+      "type": "series",
+      "tvdb_id": "393190",
+      "year": "2021",
+      "slug": "star-wars-visions",
+      "overviews": {
+        "bul": "Антологична поредица от Междузвездни войни, която ще види някои от най-добрите създатели на аниме в света да внесат своя талант в тази любима вселена.",
+        "ces": "Nejlepší anime tvůrci ukazují svůj pohled na svět Star Wars.",
+        "deu": "Star Wars: Visionen ist eine Sammlung von ungewöhnlichen Kurzfilmen aus der weit, weit entfernten Galaxis. Jede Episode erzählt eine alternative, in sich abgeschlossene Star Wars-Geschichte im Anime-Stil, die uns den Sternenkrieg aus einem neuen Blickwinkel zeigen.",
+        "eng": "This anthology of animated shorts from around the world celebrates the mythos of Star Wars through unique cultural lenses.",
+        "fin": "Star Wars: Visions on animaatiokokoelma, joka juhlii Tähtien sotaa maailman parhaiden animetekijöiden ja tarinankertojien kanssa.",
+        "fra": "Star Wars: Visions est une anthologie de courts-métrages animés rendant hommage à Star Wars à travers l'œil des meilleurs créateurs d'animés au monde.",
+        "heb": "מלחמת הכוכבים: חזיונות היא סדרה אנימה אנתולוגית. הסדרה מורכבת מתשעה סרטים קצרים שהופקו על ידי שבעה אולפני אנימציה יפניים שכל אחד מהם מספר סיפורים מקוריים משלהם המבוססים על יקום מלחמת הכוכבים.",
+        "ita": "Star Wars: Visions è un'antologia di cortometraggi animati che celebrano Star Wars attraverso lo sguardo dei migliori studi d'animazione al mondo.",
+        "jpn": "短編アニメのアンソロジー「スター・ウォーズ：ビジョンズ」は、世界最高峰のアニメクリエーターとストーリーテラーによって生み出されたスター・ウォーズ賛歌である。この作品には激しい光の点滅を伴うシーンが含まれています。光に敏感な方はご注意ください。",
+        "nld": "Star Wars: Visions is een eerbetoon aan Star Wars in de vorm van een bloemlezing van geanimeerde korte verhalen door de ogen van 's werelds beste animemakers en verhalenvertellers.",
+        "pol": "Animowana koprodukcja amerykańsko-japońska osadzona w uniwersum „Gwiezdnych wojen”. Seria składa się z dziewięciu krótkometrażowych animacji, a każda z nich będzie opowiadała inną historię. Stylistycznie i fabularnie Wizje mają nawiązywać do japońskiej kultury.",
+        "por": "Uma antologia de curtas-metragens de animação que celebra Star Wars na ótica dos melhores criadores de animé e contadores de histórias do mundo.",
+        "pt": "Uma série de antologia de curtas-metragens de animação celebrando Star Wars pelas lentes dos melhores criadores de anime do mundo.",
+        "rus": "Антология короткометражных анимационных фильмов, действие которых разворачивается в мире одной далёкой-далёкой галактики. Эпизоды сняты разными режиссёрами в различных стилях.",
+        "spa": "Antología de cortos animados que celebra a Star Wars a través de la lente de los mejores creadores de anime y narradores del mundo.",
+        "zho": "卢卡斯影业将打造全新星战短片合集《星球大战：幻象》(Star Wars: Visions，暂译)。10部短片将由日本几家不同的动漫工作室创作，将为星战引入不同文化视角。",
+        "zhtw": "《星際大戰：VISIONS》集結了 9 篇短片動畫，分別是神風動畫「The Duel」、KINEMA CITRUS「The Village Bride」、Science SARU「T0-B1」與「Akakiri」、Geno Studio「Lop and Ochō」、TUDIO COLORIDO「Tatooine Rhapsody」、TRIGGER「THE TWINS」以及「The Elder」，還有 Production I.G 的「The Ninth Jedi」。"
+      },
+      "translations": {
+        "bul": "Междузвезни войни: Видения",
+        "ces": "Star Wars: Vize",
+        "deu": "Star Wars: Visionen",
+        "ell": "Star Wars: Visions",
+        "eng": "Star Wars: Visions",
+        "fra": "Star Wars : Visions",
+        "heb": "מלחמת הכוכבים: חזיונות",
+        "ita": "Star Wars: Visions",
+        "jpn": "スター・ウォーズ：ビジョンズ",
+        "kor": "스타워즈: 비전스",
+        "nld": "Star Wars: Visions",
+        "pol": "Gwiezdne wojny: Wizje",
+        "por": "Star Wars: Visões",
+        "pt": "Star Wars: Visions",
+        "rus": "Звёздные войны: Видения",
+        "spa": "Star Wars: Visions",
+        "zho": "星球大战：幻境",
+        "zhtw": "星際大戰：VISIONS"
+      },
+      "network": "Disney+",
+      "remote_ids": [
+        {
+          "id": "10.5240/17D3-9AAA-2DF4-70F1-247A-6",
+          "type": 13,
+          "sourceName": "EIDR"
+        },
+        {
+          "id": "https://starwars.fandom.com/wiki/Star_Wars:_Visions",
+          "type": 8,
+          "sourceName": "Fan Site"
+        },
+        {
+          "id": "tt13622982",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "https://www.disneyplus.com/series/star-wars-visions/5AiiTRJ7OaKg",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "114478",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "52340",
+          "type": 19,
+          "sourceName": "TV Maze"
+        },
+        {
+          "id": "Q104161600",
+          "type": 18,
+          "sourceName": "Wikidata"
+        },
+        {
+          "id": "Star_Wars:_Visions",
+          "type": 24,
+          "sourceName": "Wikipedia"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/series/393190/posters/6139de458f13b_t.jpg"
+    },
+    {
+      "objectID": "series-420600",
+      "aliases": [
+        "Skeleton Crew",
+        "Star Wars: Skeleton Crew",
+        "Star Wars Skeleton Crew",
+        "Skeleton Crew",
+        "مغامرة من عالم حرب النجوم"
+      ],
+      "country": "usa",
+      "id": "series-420600",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/series/420600/posters/6729448c25021.jpg",
+      "name": "Star Wars: Skeleton Crew",
+      "first_air_time": "2024-12-02",
+      "overview": "The story of four kids searching for their home planet after getting lost in the Star Wars galaxy, and the strange aliens and dangerous places they encounter on their adventure.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Continuing",
+      "type": "series",
+      "tvdb_id": "420600",
+      "year": "2024",
+      "slug": "star-wars-skeleton-crew",
+      "overviews": {
+        "ara": "أربعة صبية عاديون يبحثون عن كوكبهم الأم بعدما ضلّوا طريقهم في مجرّة \"حرب النجوم\".",
+        "ces": "Seriál Bludná banda vypráví příběh čtyř dětí, které se ztratily v galaxii Star Wars a hledají svou domovskou planetu. Při svém dobrodružství se setkávají s mnoha podivnými bytostmi a nebezpečnými místy. (Disney+)",
+        "dan": "Skeleton Crew er historien om fire børn, der er faret vild i Star Wars-galaksen og leder efter deres hjemplanet, og om de mange sære væsener og farlige steder, de støder på undervejs.",
+        "deu": "Als vier Kinder auf ihrem scheinbar sicheren Heimatplaneten eine mysteriöse Entdeckung machen, verirren sie sich in einer fremden und gefährlichen Galaxie. Den Weg nach Hause zu finden und dabei unwahrscheinliche Verbündete und Feinde zu treffen, wird ein größeres Abenteuer, als sie es sich je vorgestellt haben.",
+        "eng": "The story of four kids searching for their home planet after getting lost in the Star Wars galaxy, and the strange aliens and dangerous places they encounter on their adventure.",
+        "fin": "Neljä tavallista lasta etsii kotiplaneettaansa eksyttyään Star Wars -galaksissa.",
+        "fra": "Lorsque quatre enfants font une découverte mystérieuse sur leur planète natale apparemment sûre, ils se perdent dans une galaxie étrange et dangereuse. Retrouver leur chemin vers la maison et rencontrer des alliés et des ennemis improbables sera une aventure plus grande que ce qu'ils auraient pu imaginer.",
+        "heb": "סדרת אקשן-הרפתקאות בדיונית מבית דיסני+ המוגדרת כסוג של \"הגוניס בחלל\", המתרחשת במקביל לקו הזמן של \"המנדלוריאן\" (לאחר נפילת האימפריה הגלקטית). חבורת ילדים מגלה מערה סודית בכוכב הבית שלהם, שמובילה אותם לאבד את דרכם בדרך להרפתקה סוערת בחלל, שבה בין היתר יכירו ג'דיי מסתורי (ג'וד לאו. \"החופשה\", \"שרלוק הולמס\").",
+        "hun": "A Kóbor alakulat négy gyerek történetét meséli el, akik szülőbolygójuk után kutatnak, miután eltévednek a galaxisban, valamint furcsa idegenekről és veszélyes helyekről, amelyekkel kalandjuk során találkoznak.",
+        "ita": "Quando quattro bambini fanno una misteriosa scoperta sul loro pianeta natale apparentemente sicuro, si perdono in una galassia strana e pericolosa. Trovare la strada di casa, incontrare alleati e nemici improbabili sarà un'avventura più grande di quanto avessero mai immaginato.",
+        "nld": "Nadat vier kinderen een mysterieuze ontdekking doen op hun thuisplaneet raken ze verdwaald in het sterrenstelsel. Ze komen vreemde aliens en gevaarlijke plekken tegen tijdens hun avontuur.",
+        "pt": "\"Skeleton Crew\" conta a história da busca de quatro crianças por seu planeta natal, após se perdem na galáxia de Star Wars, e dos estranhos alienígenas e lugares perigosos que eles encontram durante sua aventura. Contém sequências de luzes que podem afetar pessoas fotossensíveis.",
+        "rus": "Команда десятилетних ребят под руководством джедая Джода На Навуда отправляется в приключения по далекой галактике. Джедай Джод На Нейвуд, - обладатель Силы и очень быстромыслящий человек, использующий свой шар, чтобы найти выход из любых ситуаций. Действие сериала разворачивается в том же временном отрезке, что и сюжеты \"Мандалорца\" и \"Асоки\", - после событий \"Возвращения джедая\" в эпоху Новой Республики.",
+        "spa": "Se centrará en un grupo de niños perdidos en la galaxia que intentan encontrar su camino a casa en la era de la Nueva República.",
+        "srp": "Серија прати четворо деце која на својој матичној планети откривају скривени напуштени свемирски брод који ће их неспретним стицајем околности одвести у непознати и далеки део галаксије. Док покушавају да открију где се налазе и пронађу пут кући, откриће чудне нове светове и ванземаљце.",
+        "zho": "该剧设定在新共和国时代，讲述迷失在星球大战银河系中的孩子们，在寻找自己的家园星球的探险旅途中，遭遇古怪外星人并闯入危险之地。"
+      },
+      "translations": {
+        "ara": "حرب النجوم: فريق سكيليتون",
+        "ces": "Star Wars: Bludná banda",
+        "dan": "Star Wars: Skeleton Crew",
+        "deu": "Star Wars: Skeleton Crew",
+        "eng": "Star Wars: Skeleton Crew",
+        "fin": "Star Wars: Skeleton Crew",
+        "fra": "Star Wars : Skeleton Crew",
+        "heb": "מלחמת הכוכבים: צוות שלד",
+        "hun": "Star Wars: Kóbor alakulat",
+        "ita": "Star Wars: Skeleton Crew",
+        "nld": "Star Wars: Skeleton Crew",
+        "pt": "Star Wars: Skeleton Crew",
+        "rus": "Звездные войны: Опорная команда",
+        "spa": "Star Wars: Tripulación perdida",
+        "srp": "Звездани ратови: Без посаде",
+        "zho": "星球大战：骨干小队"
+      },
+      "network": "Disney+",
+      "remote_ids": [
+        {
+          "id": "tt20600980",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "https://www.disneyplus.com/series/star-wars-skeleton-crew/5V2Mi4qOaO77",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "202879",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "62271",
+          "type": 19,
+          "sourceName": "TV Maze"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/series/420600/posters/6729448c25021_t.jpg"
+    },
+    {
+      "objectID": "series-402177",
+      "country": "usa",
+      "id": "series-402177",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/series/402177/posters/6091176b9891b.jpg",
+      "name": "Star Wars Vehicle Flythroughs",
+      "first_air_time": "2021-05-04",
+      "overview": "Get up-close-and-personal with some of the Star Wars films' most iconic and beloved ships and vehicles as this charming series whisks you off for fly-through tours of the Galaxy Far, Far Away.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "402177",
+      "year": "2021",
+      "slug": "star-wars-vehicle-flythroughs",
+      "overviews": {
+        "deu": "Schau dir einige der berühmtesten und beliebtesten Raumschiffe und Fahrzeuge von Star Wars aus nächster Nähe an, während diese faszinierende Serie dich zu Flügen in eine weit, weit entfernte Galaxis entführt.",
+        "eng": "Get up-close-and-personal with some of the Star Wars films' most iconic and beloved ships and vehicles as this charming series whisks you off for fly-through tours of the Galaxy Far, Far Away.",
+        "fin": "Tutustutaan lähemmin Star Wars -elokuvien tunnettuihin ja rakastettuihin aluksiin ja kulkuneuvoihin, kun tämä hurmaava sarja kiertää kaukaista galaksia.",
+        "fra": "Observez de près les vaisseaux et véhicules cultes favoris de la saga Star Wars, en survolant la galaxie lointaine à travers cette superbe série.",
+        "pt": "Conheça de perto algumas das naves e veículos mais aclamados e queridos de Star Wars nesta série encantadora que o levará a um passeio panorâmico por uma Galáxia Muito, Muito Distante.",
+        "spa": "Mira de cerca algunas de las naves y vehículos más icónicos y amados de las películas de Star Wars en esta encantadora serie que te lleva a dar paseos aéreos en la galaxia muy muy lejana.",
+        "zho": "近距离接触《星球大战》电影中一些最具标志性和备受喜爱的飞船和载具，这个迷人的系列将带你飞越遥远的银河系。"
+      },
+      "translations": {
+        "deu": "Star Wars Rundflüge",
+        "eng": "Star Wars Vehicle Flythroughs",
+        "fra": "Star Wars À toute vitesse",
+        "pt": "Por Dentro dos Veículos de Star Wars",
+        "spa": "Star Wars: un paseo espacial",
+        "zho": "星球大战：载具探秘"
+      },
+      "network": "Disney+",
+      "remote_ids": [
+        {
+          "id": "https://www.hotstar.com/in/tv/star-wars-vehicle-fly-throughs/1260061833",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "124734",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "tt14578626",
+          "type": 2,
+          "sourceName": "IMDB"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/series/402177/posters/6091176b9891b_t.jpg"
+    },
+    {
+      "objectID": "series-385376",
+      "aliases": [
+        "The Bad Batch",
+        "The Bad Batch",
+        "Star Wars Bad Batch",
+        "Star Wars: La remesa mala",
+        "Star Wars: Os Mal-Feitos",
+        "Зоряні Війни: Погана партія"
+      ],
+      "country": "usa",
+      "id": "series-385376",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/series/385376/posters/6390c46086be6.jpg",
+      "name": "Star Wars: The Bad Batch",
+      "first_air_time": "2021-05-04",
+      "overview": "Follow the elite and experimental Clones of the Bad Batch as they find their way in a rapidly changing galaxy in the aftermath of the Clone Wars.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "385376",
+      "year": "2021",
+      "slug": "the-bad-batch",
+      "overviews": {
+        "ara": "يتابع فريق المستنسخين 99 متنقلين في \"الإمبراطورية\" بعد سقوط \"الجمهورية\"",
+        "bul": "Междузвезни войни: Лошата партида разказва за отряд елитни експериментални клонинги, наречени „лошата партида“ или „клониран отряд 99“ (героите вече бяха представени във „Войните на клонираните“). Те си проправят път в бързо променяща се галактика след края на войните. Клонингите от уникалния отряд се различават генетично от техните братя в армията на клонираните и благодарение на това всеки притежава по едно невероятно умение. Така заедно те са изключително ефективен екип. Лошата партида се състои от Хънтър – експерт по проследяване и лидер на групата, Еко – бивш пехотинец, превърнат в киборг, Тек – технически експерт, Рекър – най-големия побойник, и Кросхеър – умел в стрелбата.",
+        "ces": "Od událostí na Kaminu uběhly celé měsíce a Vadná várka po pádu Republiky pokračuje v putování územím Impéria. Během napínavých žoldáckých misí, které je zavádějí na nečekaná a neznámá místa, naráží na přátele i nepřátele, známé i neznámé.",
+        "dan": "Der er gået flere måneder, siden begivenhederne på Kamino, og De Hårde Hunde navigerer fortsat gennem Imperiet efter Republikkens fald. De møder både venner, fjender, nyt og bekendt på deres intense lejesoldat-missioner, der fører dem til uventede og farlige steder.",
+        "deu": "In einer Galaxis, weit weit entfernt: die Klonkriege sind vorbei, die Eliteeinheit \"The Bad Batch\" ist noch da. Genetisch unterscheiden sie sich von den anderen Klonen und jeder bringt eine einzigartige Fähigkeit mit sich, die ihn für das Team unentbehrlich macht. In einer sich rasend schnell verändernden Galaxis sucht das \"Bad Batch“ nun nach einer neuen Bestimmung - und möglichst lukrativen Einsätzen als Söldner...",
+        "ell": "Μια σκάρτη παρτίδα κλώνων πρέπει να βρει τον δρόμο της σε ένα γαλαξία που όλα αλλάζουν γρήγορα.",
+        "eng": "Follow the elite and experimental Clones of the Bad Batch as they find their way in a rapidly changing galaxy in the aftermath of the Clone Wars.",
+        "fin": "Bad Batch -klooniyksikkö etsii paikkaansa muutosten kourissa olevassa galaksissa.",
+        "fra": "L’escouade Bad Batch - une troupe d’élite de clones expérimentaux génétiquement différente de ceux constituant la grande armée de la République - trouve ses marques dans une galaxie en pleine transformation à l’issue de la Guerre des Clones.",
+        "heb": "אנימציית אקשן, סדרת ההמשך של דיסני למלחמת המשובטים. \"החברה הרעה\" של שיבוטי עילית ניסיוניים מפלסים את דרכם דרך גלקסיה המשתנה כל העת בתקופה שמיד לאחר מלחמת המשובטים.",
+        "hun": "A sorozat a 99-es Klónerő elit és kísérleti katonáit követi nyomon, miközben egy gyorsan változó galaxisban kell megtalálják meg az útjukat a klónháború után. A Bad Batch tagjai egyedülálló, kivételes képességekkel rendelkeznek, ami rendkívül hatékony katonákká és félelmetes legénységgé teszi őket.",
+        "ita": "La serie è un sequel spin-off di \"Star Wars: The Clone Wars\" e segue i cloni d’élite e sperimentali di Bad Batch (introdotti per la prima volta in The Clone Wars) mentre trovano la loro strada in una galassia in rapido cambiamento subito dopo la Guerra dei Cloni. I membri di Bad Batch – una squadra unica di cloni che variano geneticamente dai loro fratelli nell’esercito dei cloni – possiedono ciascuno un’abilità singolare eccezionale, che li rende soldati straordinariamente efficaci e un equipaggio formidabile. Nell’era successiva alla Guerra dei Cloni, affronteranno audaci missioni mercenarie mentre lottano per rimanere a galla e trovare un nuovo scopo.",
+        "jpn": "『スター・ウォーズ/クローン・ウォーズ』で初登場した遺伝子変異を持つエリートクローン・トルーパー部隊のクローン・フォース99、通称バッド・バッチはクローン大戦の余波で大胆な傭兵任務に身を投じる。",
+        "kor": "클론 전쟁의 여파로 빠르게 변화하는 은하계에서 길을 찾는 배드 배치의 엘리트 및 실험적인 클론을 따르십시오.",
+        "lat": "Un comando de clones experimentales de élite intentan abrirse camino a través de una galaxia en constante evolución tras el fin de las Guerras Clon y el alzamiento del Imperio Galáctico.",
+        "nld": "De Bad Batch moet hun weg zien te vinden in het snel veranderende sterrenstelsel.",
+        "pol": "Grupa elitarnych żołnierzy-klonów, Clone Force 99, znana również jako Parszywa zgraja, próbuje odnaleźć się w galaktyce po wojnach klonów.",
+        "por": "Passaram meses desde os eventos em Kamino e o Lote Estragado continua a sua jornada pelo Império após a queda da República. Pelo caminho, encontrarão amigos e adversários, alguns novos e outros familiares, à medida que enfrentam uma série de emocionantes missões mercenárias que os levarão a perigosos e inesperados lugares.",
+        "pt": "Os Mal-Feitos precisam encontrar seu caminho numa galáxia em rápida transformação.",
+        "rus": "Сериал поведает о похождениях отряда клонов-коммандос, ищущих своё место в галактике, стремительно меняющейся после Войны клонов. В команду наёмников входят экспериментальные клоны с разнообразными генетическими отклонениями. Каждый боец обладает уникальным умением, что превращает «Бракованную партию» в невероятно эффективную боевую единицу.",
+        "spa": "Un comando de clones experimentales de élite intentan abrirse camino a través de una galaxia en constante evolución tras el fin de las Guerras Clon y el alzamiento del Imperio Galáctico.",
+        "srp": "Упознајте малу групу одметнутих клонова познатих као Клон Јединица 99. То су генетски модификовани клонови, који се од осталих клонова створених за рат разликују по томе што имају посебне моћи, а предводи их клон по имену Хантер.",
+        "swe": "Uslingarna måste finna deras väg i en galax som snabbt förändras.",
+        "tur": "Klon Savaşları'nın ardından özel klonlardan oluşan bir grup kartların baştan dağıtıldığı yeni galakside yolunu bulmaya çalışacaktır.",
+        "ukr": "Події розгортаються майже одразу після завершення останнього епізоду оригінального серіалу, а в центр сюжету покладено історію пригод експериментального загону клонів, які були створені з різними унікальними навичками - неймовірною влучністю, феноменальним рівнем інтелекту і надлюдською фізичною силою. Втім, якщо одна сторона занадто розвинена, можуть постраждати інші якості...",
+        "zho": "Disney+将打造《星球大战：克隆人战争》衍生动画剧集《星球大战：残次品》(Star Wars: The Bad Batch，暂译)。故事围绕独特的克隆人军队——残次品(The Bad Batch)展开。该剧将于2021年播出。"
+      },
+      "translations": {
+        "ara": "حرب النجوم: المجموعة الفاسدة",
+        "bul": "Междузвезни войни: Лошата партида",
+        "ces": "Star Wars: Vadná várka",
+        "dan": "Star Wars: De hårde hunde",
+        "deu": "Star Wars: The Bad Batch",
+        "ell": "Star Wars: The Bad Batch",
+        "eng": "Star Wars: The Bad Batch",
+        "fra": "Star Wars : The Bad Batch",
+        "heb": "מלחמת הכוכבים: הקבוצה הרעה",
+        "hun": "Star Wars: A Rossz Osztag",
+        "ita": "Star Wars: The Bad Batch",
+        "jpn": "スター・ウォーズ: バッド・バッチ",
+        "kor": "스타워즈: 배드 배치",
+        "lat": "Star Wars: Remesa mala",
+        "nld": "Star Wars: The Bad Batch",
+        "pol": "Gwiezdne wojny: Parszywa zgraja",
+        "por": "Star Wars: O Lote Estragado",
+        "pt": "Star Wars: The Bad Batch",
+        "rus": "Звёздные войны: Бракованная партия",
+        "spa": "Star Wars: La remesa mala",
+        "srp": "Звездани ратови: Лоша група",
+        "swe": "Star Wars: Uslingarna",
+        "tur": "Star Wars: The Bad Batch",
+        "ukr": "Зоряні війни: Бракована партія",
+        "zho": "星球大战：残次品"
+      },
+      "network": "Disney+",
+      "remote_ids": [
+        {
+          "id": "10.5240/4F0A-01A1-3138-862A-97F7-C",
+          "type": 13,
+          "sourceName": "EIDR"
+        },
+        {
+          "id": "tt12708542",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "badbatchseries",
+          "type": 9,
+          "sourceName": "Instagram"
+        },
+        {
+          "id": "https://www.disneyplus.com/series/WP/4gMliqFxxqXC",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "105971",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "TheBadBatch",
+          "type": 6,
+          "sourceName": "X (Twitter)"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/series/385376/posters/6390c46086be6_t.jpg"
+    },
+    {
+      "objectID": "series-462715",
+      "aliases": [
+        "Star Wars: Maul - Shadow Lord",
+        "Star Wars Maul Senor de las sombras",
+        "Maul",
+        "Maul - Shadow Lord",
+        "Star Wars: Maul – Shadow Lord"
+      ],
+      "country": "usa",
+      "id": "series-462715",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/series/462715/posters/69be7f3c24740.jpg",
+      "name": "Star Wars: Maul – Shadow Lord",
+      "first_air_time": "2026-04-06",
+      "overview": "After the Clone Wars, Maul plots to rebuild his criminal syndicate on a planet untouched by the Empire.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Continuing",
+      "type": "series",
+      "tvdb_id": "462715",
+      "year": "2026",
+      "slug": "star-wars-maul-shadow-lord",
+      "overviews": {
+        "ces": "Maul po událostech Klonových válek plánuje obnovit svůj zločinecký syndikát na planetě nedotčené Impériem. Zde se jeho cesty zkříží s rozčarovanou mladou padawankou Jedi, která by mohla zaujmout místo učedníka, kterého hledá, aby mu pomohl v jeho neúnavné honbě za pomstou. (Disney+)",
+        "deu": "Nach den Ereignissen von „The Clone Wars“ plant Maul, sein Syndikat auf einem vom Imperium unberührten Planeten wieder aufzubauen. Dort begegnet er einer desillusionierten jungen Jedi-Padawan, die die gesuchte Schülerin sein könnte, die ihm bei seinem unerbittlichen Streben nach Rache helfen wird.",
+        "eng": "After the Clone Wars, Maul plots to rebuild his criminal syndicate on a planet untouched by the Empire.",
+        "fin": "Kloonisotien jälkeen Maul aikoo rakentaa uudelleen rikollisjärjestönsä Imperiumin rauhaan jättämälle planeetalle. Siellä hän kohtaa pettyneen nuoren jedioppilaan, joka voisi olla hänen etsimänsä oppipoika, joka auttaisi häntä heltymättömässä kostojahdissaan.",
+        "fra": "Après la Guerre des Clones, Maul projette de reconstruire son organisation criminelle sur une planète épargnée par l'Empire. Il croise la route d'un jeune Padawan désabusé, qui pourrait devenir l'apprenti qu'il cherche, et une aide précieuse dans sa quête de vengeance.",
+        "heb": "סדרת אנימציה בוגרת מבית לוקאספילם, המחזירה לחיים את אחד הנבלים האיקוניים של מלחמת הכוכבים. הסדרה מתרחשת מספר שנים לאחר אירועי \"מלחמות המשבטים\" ועוקבת אחרי מול, שמנסה לבנות מחדש את הסינדיקט הפלילי שלו על כוכב שטרם נגע בו האימפריום. שם, בעיר המחוספסת ג'ניקס, הוא פוגש בחניכת ג'דיי צעירה ומפוכחת שעשויה להפוך לשותפה שהוא מחפש במסע הנקם הבלתי נלאה שלו נגד פלפטין.",
+        "hun": "A ‘Klónok háborúja’ eseményei után Maul egy birodalmi érintetlenségben élő bolygón tervezi újjáépíteni bűnszövetkezetét. Ott keresztezi útját egy kiábrándult Jedi tanítvány, aki talán az a tanítvány, akire Maul vágyik – hogy segítsen neki könyörtelen bosszújának végrehajtásában.",
+        "ita": "Ambientato dopo gli eventi di \"Le Guerre dei Cloni\", Maul trama di ricostruire il suo sindacato criminale su un pianeta intatto dall'Impero. Lì incrocia la strada di un giovane Jedi Padawan disilluso, che potrebbe essere l'apprendista che sta cercando, che lo aiuterà nella sua instancabile ricerca di vendetta.",
+        "nld": "Na de gebeurtenissen van The Clone Wars beraamt Maul een plan om zijn crimineel syndicaat weer op te bouwen op de planeet Janix, die niet onder de controle van het kijzerrijk staat. Daar kruist hij het pad van een gedesillusioneerde jonge Jedi-Padawan, die wel eens de leerling zou kunnen zijn die hij zoekt en hem zal helpen in zijn meedogenloze zoektocht naar wraak.",
+        "pol": "Po Wojnach Klonów Maul planuje odbudować swój przestępczy syndykat na planecie nietkniętej przez Imperium.",
+        "por": "Passado após os eventos de \"The Clone Wars\", Maul planeia reconstruir a sua organização criminosa num planeta intocado pelo Império. Aí, encontra um jovem padawan Jedi desiludido, que pode ser o aprendiz que procura, e que o vai ajudar na sua busca implacável pela vingança.",
+        "pt": "Ambientada após os eventos de \"The Clone Wars\", a história acompanha Maul, que planeja reconstruir seu sindicato do crime em um planeta intocado pelo Império. Lá, ele cruza o caminho de uma jovem Padawan Jedi desiludida, que pode ser a aprendiz que ele procura para ajudá-lo em sua implacável busca por vingança.",
+        "rus": "После событий на Мандалоре и уничтожения Ордена джедаев Мол скрывается от нового режима и пытается восстановить свою преступную империю «Багровый рассвет». На планете Джаникс он находит падавана по имени Девон Изара, которая вместе со своим учителем-джедаем Эко-Дио Даки выжила после Приказа 66. Мол видит в ней идеального кандидата в ученицы, чтобы использовать её тёмную сторону для мести Палпатину и Империи, которая его предала. Девон же, разочарованная необходимостью выживать и воровать, оказывается перед сложным выбором между учением своего мастера и путём силы, который предлагает Мол. Одновременно с этим местный капитан полиции Лоусон пытается бороться с растущей криминальной угрозой, не привлекая внимания Империи, которая только усугубит положение планеты. Конфликт достигает точки кипения с прибытием на Джаникс инквизиторов, включая Маррока, что вынуждает всех героев пересмотреть свои планы.",
+        "spa": "Tras lo ocurrido en \"The Clone Wars\", Maul planea reconstruir su sindicato del crimen en un planeta no controlado por el Imperio. Allí, se cruza en su camino una joven y desilusionada padawan jedi, que bien podría ser la aprendiz que anda buscando para consumar su implacable venganza.",
+        "srp": "Након Ратова клонова, Мол планира да обнови свој криминални синдикат на планети коју Империја није дотакла.",
+        "swe": "Klonkrigen är över, och Maul smider planer på att återuppbygga sitt brottssyndikat på en planet dit Imperiet inte nått. Där möter han en ung och desillusionerad jedi-padawan som kan vara den lärling han söker, och som kan hjälpa honom att utkräva den hämnd han så hett eftertraktar.",
+        "ukr": "Після Війн клонів Мол планує відновити свій кримінальний синдикат на планеті, якої не торкнулася Імперія.",
+        "zho": "设定在“克隆人战争”之后，帕尔帕廷皇帝的统治将要开始之时，摩尔计划在一颗未被帝国染指的星球重建他的犯罪组织，而他遇上了一个理想破灭的绝地学徒，或许正是他在复仇之路上所需要的帮手。"
+      },
+      "translations": {
+        "ces": "Star Wars: Maul - Pán stínů",
+        "deu": "Star Wars: Maul - Shadow Lord",
+        "eng": "Star Wars: Maul – Shadow Lord",
+        "fra": "Star Wars: Maul, Seigneur de l'Ombre",
+        "heb": "מלחמת הכוכבים: מול – לורד הצללים",
+        "hun": "Star Wars: Maul – Árnyak mestere",
+        "ita": "Star Wars - Maul – Shadow Lord",
+        "nld": "Star Wars: Maul - Shadow Lord",
+        "pol": "Gwiezdne wojny: Maul - Mistrz cienia",
+        "por": "Star Wars: Maul - Senhor da Sombra",
+        "pt": "Star Wars: Maul - Lorde das Sombras",
+        "rus": "Звёздные войны: Дарт Мол — Повелитель теней",
+        "spa": "Star Wars: Maul - Señor de las sombras",
+        "srp": "Ратови звезда: Мол - Господар сенки",
+        "ukr": "Зоряні війни: Мол - Король тіней",
+        "zho": "星球大战：摩尔-暗影之王"
+      },
+      "network": "Disney+",
+      "remote_ids": [
+        {
+          "id": "tt36594331",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "289219",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/series/462715/posters/69be7f3c24740_t.jpg"
+    },
+    {
+      "objectID": "series-427821",
+      "country": "kor",
+      "id": "series-427821",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/series/427821/posters/656050155210f.jpg",
+      "name": "BTS Monuments: Beyond The Star",
+      "first_air_time": "2023-12-20",
+      "overview": "이 음악 다큐 시리즈는 21세기 팝 아이콘 방탄소년단의 놀라운 여정을 기록할 것입니다.  지난 9년 동안 방대한 음악 및 영상 라이브러리에 대한 전례 없는 액세스를 통해 이 시리즈는 두 번째 장을 준비하는 방탄소년단 멤버들의 일상, 생각 및 계획을 다룰 것입니다.",
+      "primary_language": "kor",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "427821",
+      "year": "2023",
+      "slug": "bts-monuments-beyond-the-star",
+      "overviews": {
+        "dan": "BTS markerer sit tiårs jubilæum som globalt anerkendte popikoner i det 21. århundrede. Denne serie udforsker de syv BTS-medlemmers dagligdag og inderste tanker, mens de forfølger meningen og formålet med livet.",
+        "eng": "BTS mark its 10th anniversary as globally acclaimed 21st-century pop icons. Explore the daily lives and innermost thoughts of the seven BTS members as they pursue meaning and purpose in life.",
+        "fin": "BTS juhlistaa kymmenettä vuottaan kansainvälisinä pop-ikoneina. Kansainvälisen musiikkialan huipuiksi ryhmä on päässyt voittamalla haasteet ja ylittämällä ristiriitansa. Seuraa seitsemän BTS:n jäsenen päivittäistä elämää ja intiimimpiä ajatuksia heidän etsiessään merkitystä ja tarkoitusta elämälleen. BTS:n kymmenen vuotta ja niiden yli.",
+        "fra": "Les BTS célèbrent leurs 10 ans en tant qu'icônes pop mondiales du 21e siècle. Accompagnez les sept membres de BTS dans leur vie quotidienne et écoutez-les se confier sur leurs pensées les plus intimes tandis qu'ils cherchent un sens à leurs vies.",
+        "hun": "A BTS tagjai a 21. század világszerte elismert popikonjaiként ünneplik fennállásuk tizedik évfordulóját. Less bele az együttes tagjainak mindennapjaiba és legbensőbb gondolataikba, miközben az élet értelmét próbálják megfejteni.",
+        "kor": "이 음악 다큐 시리즈는 21세기 팝 아이콘 방탄소년단의 놀라운 여정을 기록할 것입니다.  지난 9년 동안 방대한 음악 및 영상 라이브러리에 대한 전례 없는 액세스를 통해 이 시리즈는 두 번째 장을 준비하는 방탄소년단 멤버들의 일상, 생각 및 계획을 다룰 것입니다.",
+        "pt": "Esta série documental musical irá traçar a incrível jornada dos ícones pop do século 21, BTS. Com acesso sem precedentes a uma vasta biblioteca de músicas e filmagens dos últimos nove anos, a série apresentará o dia a dia, os pensamentos e os planos dos membros do BTS, enquanto se preparam para o segundo capítulo.",
+        "spa": "BTS cumple diez años como iconos del pop del siglo XXI. Únete al viaje hacia la cima y más allá."
+      },
+      "translations": {
+        "dan": "BTS Monuments: Beyond The Star",
+        "eng": "BTS Monuments: Beyond The Star",
+        "fra": "BTS Monuments: Beyond The Star",
+        "hun": "BTS Monuments: Beyond The Star",
+        "kor": "BTS Monuments: Beyond The Star",
+        "pt": "BTS Monumentos: além das estrelas",
+        "spa": "BTS Monuments: Beyond the star"
+      },
+      "network": "Disney+",
+      "remote_ids": [
+        {
+          "id": "tt23871680",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "215421",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "72902",
+          "type": 19,
+          "sourceName": "TV Maze"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/series/427821/posters/656050155210f_t.jpg"
+    },
+    {
+      "objectID": "series-410728",
+      "country": "usa",
+      "id": "series-410728",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/series/410728/posters/6154fbf165736.jpg",
+      "name": "Star Wars Galaxy of Sounds",
+      "first_air_time": "2021-09-29",
+      "overview": "“Star Wars Galaxy of Sounds” explores the ambience of a galaxy far, far away through themes such as wonder, excitement, oddities, and more. Be immersed in the hum of Coruscant at golden hour, listen to the light side of the Force as Rey connects to past Jedi, and get swept up by crackling lightsaber duels. Experience the nostalgic sounds of Star Wars from across the franchise.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "410728",
+      "year": "2021",
+      "slug": "star-wars-galaxy-of-sounds",
+      "overviews": {
+        "deu": "In \"Star Wars: Klänge der Galaxis\" wird eine weit, weit entfernte Galaxie erkundet. \r\nDabei erfahren Sie Wundersames, Spannendes, Kurioses und vieles mehr. \r\nLassen Sie sich vom Trubel auf Coruscant zur goldenen Stunde treiben, lauschen Sie der hellen Seite der Macht, wenn Rey Kontakt zu Jedi der Vergangenheit aufnimmt, und begeistern Sie sich an spannenden Lichtschwertduellen.\r\nErleben Sie die nostalgischen Klänge der gesamten Star-Wars-Reihe.",
+        "eng": "“Star Wars Galaxy of Sounds” explores the ambience of a galaxy far, far away through themes such as wonder, excitement, oddities, and more. Be immersed in the hum of Coruscant at golden hour, listen to the light side of the Force as Rey connects to past Jedi, and get swept up by crackling lightsaber duels. Experience the nostalgic sounds of Star Wars from across the franchise.",
+        "fin": "Sarja tutkii kaukaisen galaksin äänimaailmaa hämmästyksen, jännityksen, uteliaisuuksien ja muiden kautta. Sukella Coruscantin huminaan kultaisena tuntina, kuuntele voiman valoisaa puolta, kun Rey löytää yhteyden menneeseen jediin, ja tutki valosapelitaistelun kuminaa. Koe Tähtien sodan nostalgisia ääniä eri tarinoissa.",
+        "fra": "\"Star Wars: Galaxy of Sounds\" explore l’ambiance d’une galaxie très, très lointaine à travers des thèmes tels que l’émerveillement, l’excitation, l’étrangeté et bien plus. Plongez dans le vrombissement de Coruscant à l’heure dorée, écoutez le côté lumineux de la Force quand Rey entend d’anciens Jedi et assistez aux fracas des duels au sabre laser. Ressentez la nostalgie sonore de Star Wars tout au long de la franchise.",
+        "por": "“Star Wars: Galáxia de Sons” explora o ambiente de uma galáxia muito, muito distante por meio de temas como maravilha, emoção, esquisitices e muito mais. Mergulhe no zumbido de Coruscant na hora de ouro, ouça o lado luminoso da Força enquanto Rey se conecta aos Jedi anteriores e observe os duelos de sabres de luz estrondosos. Experimente os sons nostálgicos de Star Wars de toda a franquia.",
+        "pt": "A série explora o ambiente de uma galáxia muito, muito distante através de temas como encantamento, entusiasmo e outras curiosidades. Embarque no zumbido do planeta Coruscant durante a hora mágica, ouça o lado da luz da Força enquanto Rey se conecta ao passado Jedi, e observe a ressonância do duelos de sabre de luz. Experimente os sons nostálgicos de Star Wars de toda a franquia.",
+        "spa": "\"Star Wars: Galaxia de sonidos\" te sumerge en la ambientación sonora de una galaxia muy, muy lejana.",
+        "zho": "《星球大战：银河之声》通过奇迹、兴奋、奇异等主题探索一个遥远星系的氛围。沉浸在黄金时刻的科洛桑的嗡嗡声中，聆听蕾伊与过去绝地连接时光明面的力量，感受激光剑对决的火花。体验来自整个系列的星球大战怀旧声音。"
+      },
+      "translations": {
+        "deu": "Star Wars: Klänge der Galaxis",
+        "eng": "Star Wars Galaxy of Sounds",
+        "fra": "Star Wars: Galaxy of Sounds",
+        "por": "Star Wars: Galáxia de Sons",
+        "pt": "Star Wars: Galáxia de Sons",
+        "spa": "Star Wars: Galaxia de sonidos",
+        "zho": "星球大战：银河之声"
+      },
+      "network": "Disney+",
+      "remote_ids": [
+        {
+          "id": "https://www.disneyplus.com/series/star-wars-galaxy-of-sounds/POXPnpzXj8ZL",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "135211",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "135211",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "tt15516280",
+          "type": 2,
+          "sourceName": "IMDB"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/series/410728/posters/6154fbf165736_t.jpg"
+    },
+    {
+      "objectID": "series-420659",
+      "aliases": [
+        "Tales of the Jedi",
+        "Star Wars: Historias de los Jedi",
+        "Tales of the Jedi",
+        "Geschichten der Jedi",
+        "Ο Πόλεμος των Άστρων: Ιστορίες των Τζεντάι"
+      ],
+      "country": "usa",
+      "id": "series-420659",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/series/420659/posters/6370e38d2d28a.jpg",
+      "name": "Star Wars: Tales of the Jedi",
+      "first_air_time": "2022-10-26",
+      "overview": "A 6 episode event featuring parables built around Jedi from the prequel era. Journey into the lives of two distinctly different Jedi -- Ahsoka Tano and Count Dooku. Each will be put to the test as they make choices that will define their destinies.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "420659",
+      "year": "2022",
+      "slug": "star-wars-tales-of-the-jedi",
+      "overviews": {
+        "ara": "حكايات محورها الـ\"جيداي\" من حقبة ما قبل أحداث السلسلة تظهر فيها \"أسوكا تانو\" والكونت \"دوكو\" و غيرهما",
+        "bul": "Събитие от 6 епизода, включващо притчи за джедаите от ерата на предисторията. Пътуване в живота на двама различни джедаи - Асока Тано и граф Дуку. Всеки ще бъде подложен на изпитание, докато прави избор, който ще определи съдбата им.",
+        "ces": "Příběhy o Jediích z prequelové éry vyprávějí o Ahsoce Tano, hraběti Dookuovi a dalších.",
+        "deu": "Sechs Episoden mit Geschichten rund um die Jedi aus der Zeit der Prequels. Ein Besuch im Leben zweier völlig unterschiedlicher Jedi - Ahsoka Tano und Count Dooku. Jeder wird auf die Probe gestellt, und sie müssen Entscheidungen treffen, die ihr Schicksal bestimmen.",
+        "ell": "Προβολή 6 επεισοδίων με παραβολές που βασίζονται γύρω από τους Τζεντάι από την εποχή του πρίκουελ. Ταξίδι στις ζωές δύο διαφορετικών Τζεντάι -- της Ασόκα Τάνο και του Κάουντ Ντούκου. Ο καθένας θα τεθεί σε δοκιμασία καθώς κάνει επιλογές που θα καθορίσουν το πεπρωμένο του.",
+        "eng": "A 6 episode event featuring parables built around Jedi from the prequel era. Journey into the lives of two distinctly different Jedi -- Ahsoka Tano and Count Dooku. Each will be put to the test as they make choices that will define their destinies.",
+        "fin": "Kuuden jakson verran kertomuksia esiosatrilogian aikaisista jedeistä. Seuraa, kuinka kaksi hyvin erilaista jediä, Ahsoka Tano ja kreivi Dooku, kohtaavat haasteita ja tekevät valintoja, jotka tulevat määräämään heidän kohtaloidensa suunnan.",
+        "fra": "Cette série événement en six épisodes met en scène des Jedi à l'ère de la prélogie. On suivra ainsi la vie très différente de deux d'entre eux, Ahsoka Tano et le comte Dooku. Chacun sera mis à l'épreuve et devra faire des choix qui définiront sa destinée.",
+        "heb": "אנימציית אקשן בת 6 פרקים מבית דיסני+. הרקע והמקור של חניכו של אנאקין סקייווקר, אהסוקה טאנו, כמו גם סיפורו של הרוזן דוקו, כשהוא מתרחק לאט מדרכו של הג’דיי ובסופו של דבר נכנע לצד האפל של הכוח.",
+        "hun": "Egy 6 epizódból álló sorozat,amely a Jedik köré épült példázatokat tartalmazza az előzmény korszakból.Utazz két teljesen különbőző Jedi Ahsoka Tano és Dooku gróf életébe.Mindkettejüket próbára teszik,amikor a döntéseket kell hozniuk melyek meghatározzák sorsukat.",
+        "ita": "Ogni episodio racconta una breve storia dei Jedi durante il periodo della trilogia prequel di Guerre stellari. I sei episodi sono divisi in due \"percorsi\": il primo segue Ahsoka Tano in vari momenti della sua vita, e l'altro un giovane Conte Dooku prima del suo passaggio al Lato Oscuro della Forza.",
+        "por": "Uma série de seis episódios com parábolas sobre os Jedi da era das prequelas. Uma viagem à vida de dois Jedi distintos - Ahsoka Tano e Conde Dooku. Cada um será testado, enquanto fazem escolhas que irão definir os seus destinos.",
+        "pt": "Histórias sobre os Jedi numa era antes da que conhecemos. Uma jornada pela vida de dois Jedi distintos: Ahsoka Tano e Conde Dookan. Eles serão testados enquanto tomam decisões que determinarão os destinos deles.",
+        "rus": "«Звёздные войны: Сказания о джедаях» — американский анимационный телесериал-антология, созданный Дэйвом Филони для стримингового сервиса Disney+. Он станет частью медиафраншизы «Звёздные войны» и расскажет истории различных джедаев во времена Трилогии приквелов. Сериал спродюсирован студией Lucasfilm Animation, Филони является контролирующим режиссёром.\r\n\r\nПеренеситесь в жизни двух совершенно разных джедаев из эпохи приквелов — Асоки Тано и графа Дуку. Каждый будет подвергнут испытанию, когда они сделают выбор, который определит их судьбу.",
+        "spa": "Una serie de 6 episodios que presenta varias historias en torno a los Jedi de las precuelas. Adéntrate en la historia de dos jedi muy distintos: Ahsoka Tano y el Conde Dooku. Ambos serán puestos a prueba y tendrán que tomar decisiones que marcarán su destino.",
+        "zho": "踏上两位截然不同的绝地武士的生活之旅——阿索卡·塔诺和杜库伯爵。在他们做出将决定自己命运的选择时，每个人都将面临考验。"
+      },
+      "translations": {
+        "bul": "Междузвезни войни: Джадайски разкази",
+        "ces": "Star Wars: Příběhy rytířů Jedi",
+        "deu": "Star Wars: Geschichten der Jedi",
+        "ell": "Star Wars: Ιστορίες των Jedi",
+        "eng": "Star Wars: Tales of the Jedi",
+        "fra": "Star Wars : Tales of the Jedi",
+        "heb": "סיפורי הג'דיי",
+        "hun": "Star Wars: Jedihistóriák",
+        "ita": "Star Wars: Tales of the Jedi",
+        "pol": "Gwiezdne wojny: Opowieści Jedi",
+        "por": "Star Wars: Lendas dos Jedi",
+        "pt": "Star Wars: Histórias dos Jedi",
+        "rus": "Звёздные войны: Сказания о джедаях",
+        "spa": "Star Wars: Las crónicas Jedi",
+        "zho": "星球大战：绝地传奇"
+      },
+      "network": "Disney+",
+      "remote_ids": [
+        {
+          "id": "tt20723374",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "https://www.disneyplus.com/series/star-wars-tales-of-the-jedi/7ZQbZDR64MvB",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "203085",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        },
+        {
+          "id": "61886",
+          "type": 19,
+          "sourceName": "TV Maze"
+        },
+        {
+          "id": "Star_Wars:_Tales",
+          "type": 24,
+          "sourceName": "Wikipedia"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/series/420659/posters/6370e38d2d28a_t.jpg"
+    },
+    {
+      "objectID": "series-448549",
+      "aliases": [
+        "Tales of the Empire",
+        "Star Wars: Lendas do Império"
+      ],
+      "country": "usa",
+      "id": "series-448549",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/series/448549/posters/6615f0adbc432.jpg",
+      "name": "Star Wars: Tales of the Empire",
+      "first_air_time": "2024-05-04",
+      "overview": "A six episode journey into the fearsome Galactic Empire through the eyes of two warriors on divergent paths, set during different eras. After losing everything, young Morgan Elsbeth navigates the expanding Imperial world toward a path of vengeance, while former Jedi Barriss Offee does what she must to survive a rapidly changing galaxy. The choices they make will define their destinies.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "448549",
+      "year": "2024",
+      "slug": "star-wars-tales-of-the-empire",
+      "overviews": {
+        "ces": "Pomstychtivá mladá žena a bývalý Jedi procházejí nelítostným Galaktickým impériem v různých obdobích a jejich rozdílná rozhodnutí určují jejich osudy v rychle se měnící galaxii.",
+        "deu": "Die Miniserie erzählt von einer Reise durch das furchterregende galaktische Imperium aus der Sicht zweier Krieger, die unterschiedliche Wege in verschiedenen Zeiten gehen. Nachdem sie alles verloren hat, steuert die junge Morgan Elsbeth durch die expandierende imperiale Welt auf einen Pfad der Rache zu, während die ehemalige Jedi Barriss Offee versucht in der sich schnell verändernden Galaxis zu überleben. Die Entscheidungen, die sie treffen, werden ihre Schicksale bestimmen …",
+        "eng": "A six episode journey into the fearsome Galactic Empire through the eyes of two warriors on divergent paths, set during different eras. After losing everything, young Morgan Elsbeth navigates the expanding Imperial world toward a path of vengeance, while former Jedi Barriss Offee does what she must to survive a rapidly changing galaxy. The choices they make will define their destinies.",
+        "fin": "Kuuden jakson mittainen matka pelottavaan Galaktiseen Imperiumiin kahden eri polkua kulkevan ja eri aikakautena elävän soturin silmin. Menetettyään kaiken nuori Morgan Elsbeth kulkee kasvavassa Imperiumissa etsien kostoa, kun entinen jedi Barriss Offee tekee mitä vain selviytyäkseen nopeasti muuttuvassa galaksissa.",
+        "fra": "Voyagez au sein du terrible Empire Galactique à travers l'histoire de deux guerrières.",
+        "heb": "מסע אל תוך האימפריה הגלקטית חסרת הרחמים מבעד לעיניהן של שתי לוחמות, צעירה נקמנית וג’דיי לשעבר, בדרכים מסתעפות, המתרחשות בתקופות שונות. הבחירות השונות שלהם מעצבות את גורלם בגלקסיה המשתנה במהירות.",
+        "hun": "Utazás a félelmetes Galaktikus Birodalom mélyére két, külön utakon járó harcossal.",
+        "nld": "Nadat ze alles verloren heeft begeeft de jonge Morgan Elsbeth zich in het uitdijende Keizerrijk op een pad van vergelding, terwijl de voormalige Jedi Barriss Offee doet wat ze doen moet om te overleven in het snel veranderende sterrenstelsel. De keuzes die ze maken, zullen hun lot bepalen.",
+        "por": "Uma viagem de seis episódios ao temível Império Galáctico pelo olhar de duas guerreiras em caminhos divergentes, com lugar em eras distintas. Após ter perdido tudo, a jovem Morgan Elsbeth navega pelo mundo Imperial em expansão rumo a um caminho de vingança, enquanto a antiga Jedi Barriss Offee faz o que é preciso para sobreviver numa galáxia em rápida mudança. As escolhas que fazem vão definir os seus destinos.",
+        "pt": "Uma viagem ao temível Império Galáctico pelo olhar de duas guerreiras em caminhos divergentes, com lugar em eras distintas. Após ter perdido tudo, a jovem Morgan Elsbeth navega pelo mundo Imperial em expansão rumo a um caminho de vingança, enquanto a antiga Jedi Barriss Offee faz o que é preciso para sobreviver numa galáxia em rápida mudança. As escolhas que fazem vão definir os seus destinos.",
+        "rus": "Мы знаем Морган Элсбет как безжалостного магистрата Калодана из второго сезона «Мандалорца», приспешницу Трауна и антагониста сериала «Асока», но как Сестра ночи стала такой, поддалась искушениям темной стороны и встала на службу Империи? Путь ненависти Элсбет начнется на планете Датомир, где она стала свидетельницей почти полного истребления своего народа армией генерала Гривуса. Ей будут посвящены три эпизода «Сказаний об Империи», а еще три — бывшему джедаю Баррисс Оффи, чья судьба после Приказа 66 была окутана тайной и являлась предметом фанатских теорий, однако шоу наконец прольет на нее свет.",
+        "spa": "Una joven vengativa y un ex Jedi navegan por el despiadado Imperio Galáctico durante diferentes épocas, y sus decisiones divergentes moldean sus destinos en una galaxia que cambia rápidamente.",
+        "srp": "Осветољубива млада жена и бивши џедај плове немилосрдном галактичком империјом током различитих епоха, а њихови различити избори обликују њихове судбине у галаксији која се брзо мења.",
+        "zho": "全剧从银河帝国的视角出发，Nightsister Morgan Elsbeth和前绝地武士Barriss Offee扮演关键角色，剧中也将探讨Elsbeth的崛起，Thrawn、Grievous将军也将现身；Offee则在通往审判所的道路，见到了Grand Inquisitor Darth Vader本人。"
+      },
+      "translations": {
+        "ces": "Star Wars: Příběhy z Impéria",
+        "deu": "Star Wars: Geschichten des Imperiums",
+        "eng": "Star Wars: Tales of the Empire",
+        "fin": "Star Wars: Tales Of The Empire",
+        "fra": "Star Wars : Tales of the Empire",
+        "heb": "מלחמת הכוכבים: סיפורה של אימפריה",
+        "hun": "Star Wars: Birodalmi históriák",
+        "pol": "Gwiezdne wojny: Opowieści z Imperium",
+        "por": "Star Wars: Lendas do Império",
+        "pt": "Star Wars: Histórias do Império",
+        "rus": "Звёздные войны: Сказания об Империи",
+        "spa": "Star Wars: Crónicas del Imperio",
+        "srp": "Звездани ратови: Приче из Империје",
+        "zho": "星球大战：帝国传说"
+      },
+      "network": "Disney+",
+      "remote_ids": [
+        {
+          "id": "tt32019314",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "https://www.disneyplus.com/series/star-wars-tales-of-the-empire/4IEnSAj0aHpX",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "251091",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/series/448549/posters/6615f0adbc432_t.jpg"
+    },
+    {
+      "objectID": "series-380352",
+      "aliases": [
+        "Disney Gallery: The Mandalorian",
+        "Disney Les Making-of Star Wars : The Mandalorian",
+        "Galeria Disney: Star Wars: The Mandalorian"
+      ],
+      "country": "usa",
+      "id": "series-380352",
+      "image_url": "https://artworks.thetvdb.com/banners/series/380352/posters/5ea1abcfe9fce.jpg",
+      "name": "Disney Gallery / Star Wars: The Mandalorian",
+      "first_air_time": "2020-05-04",
+      "overview": "A documentary series that pulls back the curtain on The Mandalorian. Each episode explores a different facet of the live-action Star Wars television show through interviews with cast, crew, and behind-the-scenes footage.",
+      "primary_language": "eng",
+      "primary_type": "series",
+      "status": "Ended",
+      "type": "series",
+      "tvdb_id": "380352",
+      "year": "2020",
+      "slug": "disney-gallery-the-mandalorian",
+      "overviews": {
+        "deu": "Acht Folgen lange Dokumentation über den Serien-Hit auf Disney+, „The Mandalorian“. Bei der Kopfgeldjäger-Serie kam ein neues technisches Verfahren zur Anwendung, das Stagecraft heißt. Es ersetzt die Green Screens und macht Schauspielern damit das Drehen einfacher. Ans Set werden hochauflösende, digitale Hintergründe projiziert.",
+        "eng": "A documentary series that pulls back the curtain on The Mandalorian. Each episode explores a different facet of the live-action Star Wars television show through interviews with cast, crew, and behind-the-scenes footage.",
+        "fra": "Disney Les Making-of Star Wars : The Mandalorian est une série documentaire qui lève le voile sur les coulisses de The Mandalorian. Chaque épisode explore une nouvelle facette de la série télévisée en prise de vue réelles à travers des interviews des acteurs et de l'équipe technique ainsi que des images du tournage.",
+        "ita": "Il produttore esecutivo Jon Favreau invita il cast e la troupe di The Mandalorian per uno sguadro senza precedenti al dietro le quinte della serie. Ogni episodio esplora un differente aspetto della prima serie televisiva live-action di Star Wars con interviste, materiale mai visto prima, e discussioni intorno a una tavola rotonda condotte da Favreau stesso.",
+        "kor": "디즈니 갤러리/스타워즈: 만달로리안'은 '만달로리안' 무대 뒤 이야기를 밝히는 총 8편의 다큐멘터리 시리즈입니다. 각 챕터는 인터뷰, 무대 뒤 장면, 존 파브로가 주최하는 원탁 회의를 통해 최초의 '스타워즈' 실사 TV 쇼의 다양한 면모를 비춥니다.",
+        "nld": "Disney Gallery: The Mandalorian is een achtdelige documentairereeks over de serie The Mandalorian die eind vorig jaar op Disney+ verscheen. In de verschillende afleveringen wordt een kijkje achter de schermen geboden van de serie die zich afspeelt tussen de gebeurtenissen van Return of the Jedi en The Force Awakens uit de Star Wars-filmreeks. Uitvoerend producent Jon Favreau ondervraagt de cast en crew over het maken van de serie.",
+        "pt": "O produtor executivo Jon Favreau convida o elenco e a equipe de The Mandalorian para compartilhar um olhar sem precedentes na criação da série. Cada capítulo explora uma faceta diferente da primeira série live-action de TV de Star Wars por meio de entrevistas, imagens nunca antes vistas e conversas em mesa redonda organizadas pelo próprio Favreau.",
+        "rus": "Восьмисерийный документальный сериал, ведущий которого - создатель и исполнительный продюсер Джон Фавро, обещает проницательные комментарии актеров, включая Педро Паскаля и Джину Карано, анекдоты от режиссеров, снимавших эпизоды первого сезона, и исследование того, что значит быть частью истории в галактике \"Звездных войн\" и чтить наследие Джорджа Лукаса. Каждая глава исследует различные аспекты первого телевизионного шоу \"Звездные войны\" в прямом эфире через интервью, закулисные съемки и беседы за круглым столом с ведущим Джоном Фавро. Среди тем этого сезона - процесс создания фильма, наследие \"Звездных войн\" Джорджа Лукаса, то, как актеры оживили персонажей, новаторские технологии сериала, мастерство практических моделей, эффектов и существ, а также творческие влияния, культовая партитура и связи с персонажами \"Звездных войн\" и реквизитом со всей галактики.\r\n\r\nПереведено с помощью www.DeepL.com/Translator (бесплатная версия)",
+        "spa": "En ‘Disney Gallery: The Mandalorian’, el productor ejecutivo Jon Favreau invita al elenco y al equipo a compartir una mirada sin precedentes sobre la realización de la serie, que rápidamente se ha convertido en un fenómeno cultural popular tras su estreno en noviembre. Debutando el día en que la comunidad mundial de fanáticos celebra Star Wars, el lunes 4 de mayo, ‘Disney Gallery: The Mandalorian’ es una serie documental de ocho episodios que permite mirar tras el telón de ‘The Mandalorian’. Cada capítulo explora una faceta diferente de la primera serie de televisión de acción real de Star Wars a través de entrevistas, imágenes nunca antes vistas y conversaciones en mesas redondas organizadas por Jon Favreau.",
+        "zho": "《曼达洛人》幕后纪录剧集《迪士尼展廊：曼达洛人》(Disney Gallery: The Mandalorian，暂译)将于5月4日登陆Disney+。《曼达洛人》执行制片人乔恩·费儒邀请剧组成员分享在制作阶段的花絮内幕，每集都包括采访、未曝光画面及乔恩领导的圆桌对谈。该纪录剧集共8集。"
+      },
+      "translations": {
+        "deu": "Disney Galerie: The Mandalorian",
+        "eng": "Disney Gallery / Star Wars: The Mandalorian",
+        "fra": "Disney Les Making-of : The Mandalorian",
+        "ita": "Disney Gallery - Star Wars: The Mandalorian",
+        "kor": "디즈니 갤러리 - 스타워즈: 만달로리안",
+        "nld": "Disney Gallery: The Mandalorian",
+        "pt": "Disney Gallery / Star Wars: The Mandalorian",
+        "rus": "Галерея Диснея: Мандалорец",
+        "spa": "Galería Disney: Star Wars: The Mandalorian",
+        "zho": "迪士尼展廊：曼达洛人"
+      },
+      "network": "Disney+",
+      "remote_ids": [
+        {
+          "id": "10.5240/3E9E-7C27-E882-0296-0098-I",
+          "type": 13,
+          "sourceName": "EIDR"
+        },
+        {
+          "id": "tt12162902",
+          "type": 2,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "https://disneyplusoriginals.disney.com/show/disney-gallery-the-mandalorian",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "101978",
+          "type": 12,
+          "sourceName": "TheMovieDB.com"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/series/380352/posters/5ea1abcfe9fce_t.jpg"
+    }
+  ],
+  "links": {
+    "prev": null,
+    "self": "https://api4.thetvdb.com/v4/search?query=star&type=series&network=Disney+&limit=10&page=0",
+    "next": "https://api4.thetvdb.com/v4/search?query=star&type=series&network=Disney+&limit=10&page=1",
+    "total_items": 25,
+    "page_size": 10
+  }
+}

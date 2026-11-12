@@ -1,0 +1,52 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "objectID": "person-255211",
+      "aliases": [
+        "Bryan Lee Cranston",
+        "Μπράιαν Λι Κράνστον"
+      ],
+      "id": "person-255211",
+      "image_url": "https://artworks.thetvdb.com/banners/person/255211/68e688c12965e.jpg",
+      "name": "Bryan Cranston",
+      "primary_type": "people",
+      "type": "person",
+      "tvdb_id": "255211",
+      "overviews": {
+        "ell": "Ο Μπράιαν Λι Κράνστον είναι Αμερικανός ηθοποιός, σκηνοθέτης και παραγωγός, γνωστός για τους ρόλους του ως Χαλ στη σειρά του Fox \"Η τρελή οικογένεια του Μάλκολμ\"(2000–2006) και Γουόλτερ Γουάιτ στη σειρά του AMC \"Breaking Bad\"(2008–2013).",
+        "eng": "Bryan Lee Cranston is an American actor, director, producer, and screenwriter. He is best known for his roles as Tim Whatley in the NBC sitcom Seinfeld (1994–1997), Hal in the Fox sitcom Malcolm in the Middle (2000–2006), Walter White in the AMC crime drama series Breaking Bad (2008–2013), and Vince Lonigan in the Prime Video crime drama series Sneaky Pete (2015–2019).",
+        "por": "Bryan Lee Cranston é um ator, dublador, roteirista, diretor e produtor norte-americano, conhecido por interpretar Walter White na série dramática da AMC Breaking Bad, pela qual ele venceu quatro Emmys do Primetime de Melhor Ator em Série Dramática, Hal na série cômica da Fox Malcolm in the Middle e Dr.",
+        "pt": "Bryan Lee Cranston é um ator, dublador, roteirista, diretor e produtor norte-americano, conhecido por interpretar Walter White na série dramática da AMC Breaking Bad, pela qual ele venceu quatro Emmys do Primetime de Melhor Ator em Série Dramática, Hal na série cômica da Fox Malcolm in the Middle e Dr.",
+        "spa": "Bryan Lee Cranston es un actor, actor de voz, guionista, productor y director estadounidense, reconocido por su interpretación de Walter White (en la serie de AMC Breaking Bad), de Hal Wilkerson (el padre de familia de la serie de FOX Malcolm in the middle), y del doctor Tim Whatley (en la comedia de NBC Seinfeld). El papel de Walter White le ha convertido en uno de los grandes en el panorama del cine y la televisión habiendo sido galardonado con numerosos premios como los Emmy y los Globos de Oro. En la década de los 2000 pasó de ser un actor de papeles menores a ser uno de los más reconocidos en la industria cinematográfica, llegando a ser nominado a los Premios Óscar en 2016."
+      },
+      "translations": {
+        "ell": "Μπράιαν Κράνστον",
+        "eng": "Bryan Cranston",
+        "por": "Bryan Cranston",
+        "pt": "Bryan Cranston",
+        "spa": "Bryan Cranston"
+      },
+      "thumbnail": "https://artworks.thetvdb.com/banners/person/255211/68e688c12965e_t.jpg"
+    },
+    {
+      "objectID": "person-7868226",
+      "id": "person-7868226",
+      "image_url": "https://artworks.thetvdb.com/banners/images/missing/actor.jpg",
+      "name": "Brian Branston",
+      "primary_type": "people",
+      "type": "person",
+      "tvdb_id": "7868226",
+      "translations": {
+        "eng": "Brian Branston"
+      }
+    }
+  ],
+  "links": {
+    "prev": null,
+    "self": "https://api4.thetvdb.com/v4/search?query=bryan cranston&type=person&limit=5&page=0",
+    "next": null,
+    "total_items": 2,
+    "page_size": 5
+  }
+}

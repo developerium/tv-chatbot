@@ -1,0 +1,25 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "companyTypeId": 1,
+      "companyTypeName": "Network"
+    },
+    {
+      "companyTypeId": 2,
+      "companyTypeName": "Studio"
+    },
+    {
+      "companyTypeId": 3,
+      "companyTypeName": "Production Company"
+    },
+    {
+      "companyTypeId": 4,
+      "companyTypeName": "Distributor"
+    },
+    {
+      "companyTypeId": 5,
+      "companyTypeName": "Special Effects"
+    }
+  ]
+}

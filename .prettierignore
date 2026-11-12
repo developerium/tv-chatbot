@@ -1,0 +1,4 @@
+# Hand-written docs and raw recorded TVDB responses keep their own layout
+*.md
+.claude/
+test/fixtures/

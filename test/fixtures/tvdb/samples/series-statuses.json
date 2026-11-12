@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "id": 1,
+      "name": "Continuing",
+      "recordType": "series",
+      "keepUpdated": false
+    },
+    {
+      "id": 2,
+      "name": "Ended",
+      "recordType": "series",
+      "keepUpdated": false
+    },
+    {
+      "id": 3,
+      "name": "Upcoming",
+      "recordType": "series",
+      "keepUpdated": false
+    }
+  ]
+}

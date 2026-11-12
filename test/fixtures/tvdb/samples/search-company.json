@@ -1,0 +1,149 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "objectID": "company-1293",
+      "aliases": [
+        "Disney Plus",
+        "דיסני פלוס",
+        "ديزني بلس",
+        "Disney Plus",
+        "DSNP",
+        "Disney+ Star",
+        "Star"
+      ],
+      "company_type": "Network",
+      "country": "usa",
+      "id": "company-1293",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/company/1293/icons/62be0cce72b32.png",
+      "name": "Disney+",
+      "primary_type": "Network",
+      "type": "company",
+      "tvdb_id": "1293",
+      "year": "2019",
+      "slug": "disney-plus",
+      "overviews": {
+        "eng": "Disney+ is the dedicated streaming home for movies and shows from Disney, Pixar, Marvel, Star Wars, and National Geographic, along with The Simpsons and much more. In select international markets, it also includes the new general entertainment content brand, Star. The flagship direct-to-consumer streaming service from The Walt Disney Company, Disney+ is part of the Disney Media & Entertainment Distribution segment. The service offers commercial-free streaming alongside an ever-growing collection of exclusive originals, including feature-length films, documentaries, live-action and animated series, and short-form content. With unprecedented access to Disney’s long history of incredible film and television entertainment, Disney+ is also the exclusive streaming home for the newest releases from The Walt Disney Studios.",
+        "fra": "Disney plus est une plateforme de vidéo à la demande (SVOD). Elle propose principalement les programmes originaux ou non des grandes franchises et studios Disney / Pixar / Marvel / Star Wars / National Geographic.",
+        "hun": "A Disney+ a Disney, a Pixar, a Marvel, a Star Wars, a National Geographic és a Star otthona. Az exkluzív saját gyártású tartalmaktól az általad ismert és kedvelt klasszikus történetekig a Disney+ több ezer műsort kínál kiváló minőségű megtekintési élményt biztosítva.",
+        "spa": "Disney+ es un servicio de streaming propiedad de The Walt Disney Company mediante su división Disney Media and Entertainment Distribution. El servicio ofrece películas, documentales, especiales, cortos, programas y series de televisión producidas por The Walt Disney Studios y Walt Disney Television."
+      },
+      "translations": {
+        "ara": "ديزني+",
+        "eng": "Disney+",
+        "fra": "Disney+",
+        "heb": "דיסני+",
+        "hun": "Disney+",
+        "nld": "Disney+",
+        "spa": "Disney+"
+      },
+      "remote_ids": [
+        {
+          "id": "DisneyPlus",
+          "type": 5,
+          "sourceName": "Facebook"
+        },
+        {
+          "id": "co0721120",
+          "type": 17,
+          "sourceName": "IMDB"
+        },
+        {
+          "id": "disneyplus/",
+          "type": 9,
+          "sourceName": "Instagram"
+        },
+        {
+          "id": "https://www.disneyplus.com/",
+          "type": 4,
+          "sourceName": "Official Website"
+        },
+        {
+          "id": "disneyplus",
+          "type": 6,
+          "sourceName": "X (Twitter)"
+        },
+        {
+          "id": "Disney%2B",
+          "type": 24,
+          "sourceName": "Wikipedia"
+        },
+        {
+          "id": "disneyplus",
+          "type": 11,
+          "sourceName": "Youtube"
+        }
+      ],
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/company/1293/icons/62be0cce72b32_t.png"
+    },
+    {
+      "objectID": "company-169",
+      "company_type": "Network",
+      "country": "usa",
+      "id": "company-169",
+      "name": "Playhouse Disney",
+      "primary_type": "Network",
+      "type": "company",
+      "tvdb_id": "169",
+      "slug": "playhouse-disney",
+      "translations": {
+        "eng": "Playhouse Disney"
+      }
+    },
+    {
+      "objectID": "company-270",
+      "company_type": "Network",
+      "country": "usa",
+      "id": "company-270",
+      "name": "Toon Disney",
+      "primary_type": "Network",
+      "type": "company",
+      "tvdb_id": "270",
+      "slug": "toon-disney",
+      "translations": {
+        "eng": "Toon Disney"
+      }
+    },
+    {
+      "objectID": "company-82",
+      "company_type": "Network",
+      "country": "gbr",
+      "id": "company-82",
+      "name": "Disney Cinemagic",
+      "primary_type": "Network",
+      "type": "company",
+      "tvdb_id": "82",
+      "slug": "disney-cinemagic",
+      "translations": {
+        "eng": "Disney Cinemagic"
+      }
+    },
+    {
+      "objectID": "company-406",
+      "aliases": [
+        "Disney XD (US)",
+        "DXD"
+      ],
+      "company_type": "Network",
+      "country": "usa",
+      "id": "company-406",
+      "image_url": "https://artworks.thetvdb.com/banners/v4/company/406/icons/604440e76afeb.png",
+      "name": "Disney XD",
+      "primary_type": "Network",
+      "type": "company",
+      "tvdb_id": "406",
+      "slug": "disney-xd",
+      "translations": {
+        "eng": "Disney XD"
+      },
+      "thumbnail": "https://artworks.thetvdb.com/banners/v4/company/406/icons/604440e76afeb_t.png"
+    }
+  ],
+  "links": {
+    "prev": null,
+    "self": "https://api4.thetvdb.com/v4/search?query=disney+&type=company&limit=5&page=0",
+    "next": "https://api4.thetvdb.com/v4/search?query=disney+&type=company&limit=5&page=1",
+    "total_items": 50,
+    "page_size": 5
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "status": "success",
+  "data": {
+    "id": 1293,
+    "name": "Disney+",
+    "slug": "disney-plus",
+    "nameTranslations": [
+      "ara",
+      "eng",
+      "fra",
+      "heb",
+      "hun",
+      "nld",
+      "spa"
+    ],
+    "overviewTranslations": [
+      "eng",
+      "fra",
+      "hun",
+      "spa"
+    ],
+    "aliases": [
+      {
+        "language": "spa",
+        "name": "Disney Plus"
+      },
+      {
+        "language": "heb",
+        "name": "דיסני פלוס"
+      },
+      {
+        "language": "ara",
+        "name": "ديزني بلس"
+      },
+      {
+        "language": "eng",
+        "name": "Disney Plus"
+      },
+      {
+        "language": "eng",
+        "name": "DSNP"
+      },
+      {
+        "language": "eng",
+        "name": "Disney+ Star"
+      },
+      {
+        "language": "eng",
+        "name": "Star"
+      }
+    ],
+    "country": "usa",
+    "primaryCompanyType": 1,
+    "activeDate": "2019-11-12",
+    "inactiveDate": null,
+    "companyType": {
+      "companyTypeId": 1,
+      "companyTypeName": "Network"
+    },
+    "parentCompany": {
+      "id": 45764,
+      "name": "Walt Disney Company",
+      "relation": {
+        "id": null,
+        "typeName": null
+      }
+    },
+    "tagOptions": [
+      {
+        "id": 489,
+        "tag": 24,
+        "tagName": "Company Type",
+        "name": "SVOD",
+        "helpText": "Subscription video on demand. Examples: Netflix Amazon Prime Video, Disney+."
+      }
+    ]
+  }
+}
