@@ -2,7 +2,9 @@ import { Inject, Injectable, Logger } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { randomUUID } from 'node:crypto'
 
-import type { ChatEntity } from '../storage/chat.entity.js'
+import type { Paginated } from '../common/pagination/paginated.js'
+import type { PaginationQueryDto } from '../common/pagination/pagination-query.dto.js'
+import type { ChatEntity, ChatSummaryEntity } from '../storage/chat.entity.js'
 import type { MessageEntity } from '../storage/message.entity.js'
 import type { MessageExchange } from './message-exchange.js'
 import type { SendMessageDto } from './send-message.dto.js'
@@ -36,6 +38,14 @@ export class ChatService {
     this.logger.log(`Created chat ${chat.id}`)
 
     return chat
+  }
+
+  // The user's chats without messages, newest first.
+  async listChats(
+    userId: string,
+    page: PaginationQueryDto,
+  ): Promise<Paginated<ChatSummaryEntity>> {
+    return this.chatRepository.listByUser(userId, page)
   }
 
   // Runs one agent turn. Returns null if the user has no such chat.

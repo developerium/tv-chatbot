@@ -6,9 +6,8 @@ import { Test } from '@nestjs/testing'
 import { randomUUID } from 'node:crypto'
 import request from 'supertest'
 
+import { encodeCursor } from '../common/pagination/cursor.js'
 import { PLACEHOLDER_USER_ID } from '../common/user-id.decorator.js'
-import { CHAT_REPOSITORY } from '../storage/chat.repository.js'
-import { InMemoryChatRepository } from '../storage/in-memory-chat.repository.js'
 import { AssistantUnavailableError } from './assistant-unavailable.error.js'
 import { ChatController } from './chat.controller.js'
 import { ChatService } from './chat.service.js'
@@ -16,11 +15,13 @@ import { TurnTimeoutError } from './turn-timeout.error.js'
 
 describe('ChatController', () => {
   let app: INestApplication
-  let repository: InMemoryChatRepository
+  const createChat = vi.fn()
+  const listChats = vi.fn()
   const sendMessage = vi.fn()
 
   beforeEach(async () => {
-    repository = new InMemoryChatRepository()
+    createChat.mockReset()
+    listChats.mockReset()
     sendMessage.mockReset()
 
     const module = await Test.createTestingModule({
@@ -28,12 +29,8 @@ describe('ChatController', () => {
       providers: [
         {
           provide: ChatService,
-          useFactory: () => ({
-            createChat: (userId: string) => repository.create(userId),
-            sendMessage,
-          }),
+          useValue: { createChat, listChats, sendMessage },
         },
-        { provide: CHAT_REPOSITORY, useValue: repository },
       ],
     }).compile()
 
@@ -47,23 +44,78 @@ describe('ChatController', () => {
     await app.close()
   })
 
+  const summary = {
+    createdAt: new Date('2026-11-09T10:00:00Z'),
+    id: randomUUID(),
+    updatedAt: new Date('2026-11-09T10:05:00Z'),
+    userId: PLACEHOLDER_USER_ID,
+    version: 3,
+  }
+  const chat = { ...summary, messages: [] }
+
   describe('POST /api/chat', () => {
     it('creates a chat for the current user and returns its id', async () => {
+      createChat.mockResolvedValue(chat)
+
       const response = await request(app.getHttpServer())
         .post('/api/chat')
         .expect(201)
 
+      expect(createChat).toHaveBeenCalledWith(PLACEHOLDER_USER_ID)
       expect(response.body).toEqual({
-        createdAt: expect.any(String),
-        id: expect.any(String),
+        createdAt: '2026-11-09T10:00:00.000Z',
+        id: chat.id,
       })
+    })
+  })
 
-      const chat = await repository.findById(
-        response.body.id,
-        PLACEHOLDER_USER_ID,
-      )
-      expect(chat?.createdAt.toISOString()).toBe(response.body.createdAt)
-      expect(chat?.messages).toEqual([])
+  describe('GET /api/chat', () => {
+    it('returns a page of chats with only public fields', async () => {
+      listChats.mockResolvedValue({ items: [summary], nextCursor: 'next' })
+
+      const response = await request(app.getHttpServer())
+        .get('/api/chat')
+        .expect(200)
+
+      expect(listChats).toHaveBeenCalledWith(PLACEHOLDER_USER_ID, { limit: 20 })
+      expect(response.body).toEqual({
+        items: [
+          {
+            createdAt: '2026-11-09T10:00:00.000Z',
+            id: chat.id,
+            updatedAt: '2026-11-09T10:05:00.000Z',
+          },
+        ],
+        nextCursor: 'next',
+      })
+    })
+
+    it('passes the limit and the decoded cursor on', async () => {
+      listChats.mockResolvedValue({ items: [], nextCursor: null })
+      const cursor = { id: chat.id, value: chat.createdAt }
+
+      await request(app.getHttpServer())
+        .get('/api/chat')
+        .query({ cursor: encodeCursor(cursor), limit: 5 })
+        .expect(200)
+
+      expect(listChats).toHaveBeenCalledWith(PLACEHOLDER_USER_ID, {
+        cursor,
+        limit: 5,
+      })
+    })
+
+    it.each([
+      ['a bad cursor', { cursor: 'nope' }],
+      ['a too large limit', { limit: 101 }],
+      ['an unknown parameter', { page: 2 }],
+    ])('rejects %s with 400', async (_case, query) => {
+      await request(app.getHttpServer())
+        .get('/api/chat')
+        .query(query)
+        .expect(400)
+
+      expect(listChats).not.toHaveBeenCalled()
     })
   })
 

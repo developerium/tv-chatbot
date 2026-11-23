@@ -19,20 +19,22 @@ flowchart LR
 
 Built (read the code for details):
 
-- `src/chat`: `POST /api/chat`, `POST /api/chat/:id/message` with
-  `clientId` deduplication
+- `src/chat`: `POST /api/chat`, `GET /api/chat`, `POST
+  /api/chat/:id/message` with `clientId` deduplication
 - `src/agent`: OpenAI Agents SDK run with a structured final answer
   (`kind`, `message`, `sources`), grounding check with one correction round,
   fixed off-topic reply, history limit, turn deadline
 - `src/tvdb`: client (login, token refresh, timeouts, retries), five tools,
   compact mappers
-- `src/storage`: `ChatRepository` (Mongoose and in-memory), optimistic
+- `src/storage`: `ChatRepository` (Mongoose), optimistic
   concurrency on `version`, `chat` collection
-- `src/common`: retry helper, placeholder `AuthGuard` and `@UserId()`,
+- `src/common`: pagination (`paginationQuerySchema`, `Paginated<T>`,
+  cursors) with `paginate` in `src/storage`, retry
+  helper, placeholder `AuthGuard` and `@UserId()`,
   `InternalErrorFilter`, request logging
 - Limits and their defaults: `.env.example`
 
-Not built yet: `GET`/`DELETE` endpoints and pagination, `TvdbCache`,
+Not built yet: the other `GET` endpoints and `DELETE`, `TvdbCache`,
 preferences, `summary`, `recommendations` and `metadata` on messages,
 storing failed turns, the tool-free last step, Sentry, rate limiting on our
 own API, grounding tests. Their design is below.
@@ -45,7 +47,7 @@ own API, grounding tests. Their design is below.
 | --- | --- | --- |
 | `POST /api/chat` | `201 { id, createdAt }` | Built |
 | `POST /api/chat/:id/message` | `{ userMessage, assistantMessage }` | Built |
-| `GET /api/chat` | `Paginated<ChatSummaryDto>`, newest first | Planned |
+| `GET /api/chat` | `Paginated<ChatSummaryDto>` (`id`, timestamps, no messages), newest by `createdAt` first | Built |
 | `GET /api/chat/:id` | `ChatDto` (preferences, timestamps, no messages) | Planned |
 | `GET /api/chat/:id/message` | `Paginated<MessageDto>`, newest first | Planned |
 | `DELETE /api/chat/:id` | `204` | Planned |
@@ -65,14 +67,17 @@ own API, grounding tests. Their design is below.
 
 ### Pagination
 
-One mechanism for every listing endpoint (not built yet):
+One mechanism for every listing endpoint:
 
-- `PaginationQueryDto` (`limit`, opaque `cursor`), `Paginated<T>`
+- `PaginationQueryDto` (`limit` 1-100, default 20, opaque `cursor`), `Paginated<T>`
   (`{ items, nextCursor }`, `null` on the last page) and cursor
-  encode/decode live in `src/common` and never import Mongoose, so
-  controllers and services can use them.
+  encode/decode live in `src/common/pagination` (`pagination-query.dto.ts`,
+  `paginated.ts`, `cursor.ts`) and never import Mongoose, so controllers
+  and services can use them.
 - A generic Mongoose `paginate<T>(model, filter, { limit, cursor,
-  sortField })` and an in-memory twin live in `src/storage`.
+  sortField, projection })` lives in `src/storage`.
+  Sort fields are Dates and must not change after creation (`createdAt`,
+  not `updatedAt`), or items would move between pages.
 - Keyset pagination: sort on the field plus `_id` as tie-breaker, fetch
   `limit + 1` to detect a next page. It stays correct while new chats and
   messages arrive and uses an index instead of skipping.
@@ -163,7 +168,7 @@ differs per entry.
   (`freshUntil` + stale grace), so stale entries survive to be served
   when TVDB fails.
 - Layers: tool → TVDB client → `TvdbCache` (`get`, `getStale`, `set`) →
-  `MongoTvdbCache` or `InMemoryTvdbCache`.
+  `MongoTvdbCache`.
 
 | Group | Requests | Default TTL | Config |
 | --- | --- | --- | --- |

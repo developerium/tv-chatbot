@@ -1,9 +1,11 @@
 import { ConfigService } from '@nestjs/config'
 
 import type { AgentReply } from '../agent/final-answer.js'
+import type { ChatEntity } from '../storage/chat.entity.js'
+import type { ChatRepository } from '../storage/chat.repository.js'
+import type { MessageEntity } from '../storage/message.entity.js'
 
 import { AgentService } from '../agent/agent.service.js'
-import { InMemoryChatRepository } from '../storage/in-memory-chat.repository.js'
 import { AssistantUnavailableError } from './assistant-unavailable.error.js'
 import { ChatService } from './chat.service.js'
 import { TurnTimeoutError } from './turn-timeout.error.js'
@@ -21,9 +23,56 @@ const reply: AgentReply = {
   ],
 }
 
-function createService(chat: AgentService['chat']) {
-  const repository = new InMemoryChatRepository()
-  const agent = { chat: vi.fn(chat) }
+const clientId = '6f1c9a52-3d0b-4c7e-9f45-2a8d1e7b6c30'
+
+const question: MessageEntity = {
+  clientId,
+  createdAt: new Date('2026-11-09T10:00:00Z'),
+  id: 'question',
+  role: 'user',
+  status: 'complete',
+  text: 'Like Breaking Bad',
+}
+const answer: MessageEntity = {
+  createdAt: new Date('2026-11-09T10:00:05Z'),
+  id: 'answer',
+  kind: 'answer',
+  replyTo: 'question',
+  role: 'assistant',
+  sources: [],
+  status: 'complete',
+  text: 'Try Better Call Saul.',
+}
+
+function chatWith(messages: MessageEntity[]): ChatEntity {
+  return {
+    createdAt: new Date('2026-11-09T09:00:00Z'),
+    id: 'chat-1',
+    messages,
+    updatedAt: new Date('2026-11-09T09:00:00Z'),
+    userId: 'user-1',
+    version: 0,
+  }
+}
+
+// `chat` is what findById returns; addMessages appends to the given chat.
+function createService(
+  chat: ChatEntity | null,
+  agentChat: AgentService['chat'] = async () => reply,
+) {
+  const repository = {
+    addMessages: vi.fn<ChatRepository['addMessages']>(
+      async (saved, messages) => ({
+        ...chat!,
+        messages: [...chat!.messages, ...messages],
+        version: saved.version + 1,
+      }),
+    ),
+    create: vi.fn<ChatRepository['create']>(),
+    findById: vi.fn<ChatRepository['findById']>(async () => chat),
+    listByUser: vi.fn<ChatRepository['listByUser']>(),
+  }
+  const agent = { chat: vi.fn(agentChat) }
   const config = new ConfigService({ AGENT_TURN_TIMEOUT_MS: '50' })
   const service = new ChatService(
     repository,
@@ -34,12 +83,22 @@ function createService(chat: AgentService['chat']) {
   return { agent, repository, service }
 }
 
-describe('ChatService.sendMessage', () => {
-  it('saves the question and the answer with its sources', async () => {
-    const { agent, repository, service } = createService(async () => reply)
-    const chat = await repository.create('user-1')
+describe('ChatService.listChats', () => {
+  it("returns the repository's page of the user's chats", async () => {
+    const { repository, service } = createService(null)
+    const page = { items: [], nextCursor: null }
+    repository.listByUser.mockResolvedValue(page)
 
-    const result = await service.sendMessage(chat.id, 'user-1', {
+    await expect(service.listChats('user-1', { limit: 5 })).resolves.toBe(page)
+    expect(repository.listByUser).toHaveBeenCalledWith('user-1', { limit: 5 })
+  })
+})
+
+describe('ChatService.sendMessage', () => {
+  it('saves the question, then the answer with its sources', async () => {
+    const { agent, repository, service } = createService(chatWith([]))
+
+    const result = await service.sendMessage('chat-1', 'user-1', {
       text: 'Like Breaking Bad',
     })
 
@@ -54,117 +113,109 @@ describe('ChatService.sendMessage', () => {
       'Like Breaking Bad',
       expect.any(AbortSignal),
     )
-
-    const saved = await repository.findById(chat.id, 'user-1')
-    expect(saved?.messages).toEqual([
-      result?.userMessage,
-      result?.assistantMessage,
+    expect(repository.addMessages.mock.calls).toEqual([
+      [expect.objectContaining({ version: 0 }), [result?.userMessage]],
+      [expect.objectContaining({ version: 1 }), [result?.assistantMessage]],
     ])
   })
 
   it('passes earlier messages as history', async () => {
-    const { agent, repository, service } = createService(async () => reply)
-    const chat = await repository.create('user-1')
-    const first = await service.sendMessage(chat.id, 'user-1', {
-      text: 'Like Breaking Bad',
-    })
+    const { agent, service } = createService(chatWith([question, answer]))
 
-    await service.sendMessage(chat.id, 'user-1', { text: 'Tell me more' })
+    await service.sendMessage('chat-1', 'user-1', { text: 'Tell me more' })
 
-    expect(agent.chat).toHaveBeenLastCalledWith(
-      [first?.userMessage, first?.assistantMessage],
+    expect(agent.chat).toHaveBeenCalledWith(
+      [question, answer],
       'Tell me more',
       expect.any(AbortSignal),
     )
   })
 
-  it("returns null for another user's chat", async () => {
-    const { agent, repository, service } = createService(async () => reply)
-    const chat = await repository.create('user-1')
+  it('returns null when the user has no such chat', async () => {
+    const { agent, repository, service } = createService(null)
 
     await expect(
-      service.sendMessage(chat.id, 'user-2', { text: 'Hi' }),
+      service.sendMessage('chat-1', 'user-2', { text: 'Hi' }),
     ).resolves.toBeNull()
+    expect(repository.findById).toHaveBeenCalledWith('chat-1', 'user-2')
     expect(agent.chat).not.toHaveBeenCalled()
   })
 
   it('keeps the question and throws TurnTimeoutError when the turn times out', async () => {
     const { repository, service } = createService(
+      chatWith([]),
       (_history, _message, signal) =>
         new Promise((_resolve, reject) => {
           signal.addEventListener('abort', () => reject(signal.reason))
         }),
     )
-    const chat = await repository.create('user-1')
 
     await expect(
-      service.sendMessage(chat.id, 'user-1', { text: 'Hi' }),
+      service.sendMessage('chat-1', 'user-1', { text: 'Hi' }),
     ).rejects.toThrow(TurnTimeoutError)
 
-    const saved = await repository.findById(chat.id, 'user-1')
-    expect(saved?.messages.map(({ role }) => role)).toEqual(['user'])
+    expect(repository.addMessages).toHaveBeenCalledTimes(1)
+    expect(repository.addMessages.mock.calls[0][1]).toEqual([
+      expect.objectContaining({ role: 'user', text: 'Hi' }),
+    ])
   })
 
   it('throws AssistantUnavailableError when the agent fails', async () => {
-    const { repository, service } = createService(async () => {
+    const { service } = createService(chatWith([]), async () => {
       throw new Error('429 You have no credits remaining')
     })
-    const chat = await repository.create('user-1')
 
     await expect(
-      service.sendMessage(chat.id, 'user-1', { text: 'Hi' }),
+      service.sendMessage('chat-1', 'user-1', { text: 'Hi' }),
     ).rejects.toThrow(AssistantUnavailableError)
   })
 
   describe('with a clientId', () => {
-    const clientId = '6f1c9a52-3d0b-4c7e-9f45-2a8d1e7b6c30'
+    it('saves the clientId on the question', async () => {
+      const { service } = createService(chatWith([]))
 
-    it('returns the saved answer for a repeated clientId without a new turn', async () => {
-      const { agent, repository, service } = createService(async () => reply)
-      const chat = await repository.create('user-1')
-
-      const first = await service.sendMessage(chat.id, 'user-1', {
-        clientId,
-        text: 'Like Breaking Bad',
-      })
-      const second = await service.sendMessage(chat.id, 'user-1', {
-        clientId,
-        text: 'Like Breaking Bad',
-      })
-
-      expect(second).toEqual(first)
-      expect(first?.userMessage.clientId).toBe(clientId)
-      expect(agent.chat).toHaveBeenCalledTimes(1)
-
-      const saved = await repository.findById(chat.id, 'user-1')
-      expect(saved?.messages).toHaveLength(2)
-    })
-
-    it('answers the saved question again when the earlier turn failed', async () => {
-      const { agent, repository, service } = createService(async () => reply)
-      const chat = await repository.create('user-1')
-      agent.chat.mockRejectedValueOnce(new Error('OpenAI is down'))
-
-      await expect(
-        service.sendMessage(chat.id, 'user-1', { clientId, text: 'Hi' }),
-      ).rejects.toThrow(AssistantUnavailableError)
-      const retry = await service.sendMessage(chat.id, 'user-1', {
+      const result = await service.sendMessage('chat-1', 'user-1', {
         clientId,
         text: 'Hi',
       })
 
-      expect(retry?.assistantMessage.replyTo).toBe(retry?.userMessage.id)
-      expect(agent.chat).toHaveBeenLastCalledWith(
-        [],
-        'Hi',
-        expect.any(AbortSignal),
+      expect(result?.userMessage.clientId).toBe(clientId)
+    })
+
+    it('returns the saved answer for a repeated clientId without a new turn', async () => {
+      const { agent, repository, service } = createService(
+        chatWith([question, answer]),
       )
 
-      const saved = await repository.findById(chat.id, 'user-1')
+      await expect(
+        service.sendMessage('chat-1', 'user-1', {
+          clientId,
+          text: 'Like Breaking Bad',
+        }),
+      ).resolves.toEqual({ assistantMessage: answer, userMessage: question })
+      expect(agent.chat).not.toHaveBeenCalled()
+      expect(repository.addMessages).not.toHaveBeenCalled()
+    })
 
-      expect(saved?.messages).toHaveLength(2)
-      expect(saved?.messages[0].role).toBe('user')
-      expect(saved?.messages[1].role).toBe('assistant')
+    it('answers the saved question again when the earlier turn failed', async () => {
+      const { agent, repository, service } = createService(chatWith([question]))
+
+      const retry = await service.sendMessage('chat-1', 'user-1', {
+        clientId,
+        text: 'Like Breaking Bad',
+      })
+
+      expect(retry?.userMessage).toEqual(question)
+      expect(retry?.assistantMessage.replyTo).toBe('question')
+      expect(agent.chat).toHaveBeenCalledWith(
+        [],
+        'Like Breaking Bad',
+        expect.any(AbortSignal),
+      )
+      expect(repository.addMessages).toHaveBeenCalledTimes(1)
+      expect(repository.addMessages.mock.calls[0][1]).toEqual([
+        retry?.assistantMessage,
+      ])
     })
   })
 })

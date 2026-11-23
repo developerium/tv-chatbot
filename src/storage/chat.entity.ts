@@ -10,3 +10,6 @@ export interface ChatEntity {
   // Optimistic concurrency: every save must match it and increments it.
   version: number
 }
+
+// A chat without its messages, for listings.
+export type ChatSummaryEntity = Omit<ChatEntity, 'messages'>

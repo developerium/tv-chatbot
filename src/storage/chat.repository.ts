@@ -1,4 +1,6 @@
-import type { ChatEntity } from './chat.entity.js'
+import type { Paginated } from '../common/pagination/paginated.js'
+import type { PaginationQueryDto } from '../common/pagination/pagination-query.dto.js'
+import type { ChatEntity, ChatSummaryEntity } from './chat.entity.js'
 import type { MessageEntity } from './message.entity.js'
 
 export const CHAT_REPOSITORY = Symbol('CHAT_REPOSITORY')
@@ -15,4 +17,10 @@ export interface ChatRepository {
 
   // Returns null for unknown chats and for chats owned by another user.
   findById(id: string, userId: string): Promise<ChatEntity | null>
+
+  // The user's chats without messages, newest first.
+  listByUser(
+    userId: string,
+    page: PaginationQueryDto,
+  ): Promise<Paginated<ChatSummaryEntity>>
 }

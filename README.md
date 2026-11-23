@@ -34,6 +34,10 @@ so all chats belong to that user.
 ```bash
 curl -X POST http://127.0.0.1:8080/api/chat
 
+# Your chats without messages, newest first; pass `nextCursor` back as
+# `cursor` for the next page.
+curl 'http://127.0.0.1:8080/api/chat?limit=20'
+
 curl -X POST http://127.0.0.1:8080/api/chat/<chat id>/message \
   -H 'Content-Type: application/json' \
   -d '{ "text": "I liked the main cast of Breaking Bad, what else are they in?" }'
@@ -49,7 +53,3 @@ npm test
 npm run lint
 npm run format:check
 ```
-
-Set `MONGODB_TEST_URI` (e.g.
-`mongodb://user:password@127.0.0.1:27017/?authSource=admin`) to also run
-the storage tests against a real MongoDB.

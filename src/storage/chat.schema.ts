@@ -47,8 +47,11 @@ export class ChatDocument {
   @Prop({ default: [], type: [SchemaFactory.createForClass(MessageDocument)] })
   messages: MessageEntity[]
   updatedAt: Date
-  @Prop({ index: true, required: true }) userId: string
+  @Prop({ required: true }) userId: string
   @Prop({ default: 0, required: true }) version: number
 }
 
 export const ChatSchema = SchemaFactory.createForClass(ChatDocument)
+
+// Owner lookups and the newest-first chat listing (keyset on createdAt, _id).
+ChatSchema.index({ userId: 1, createdAt: -1, _id: -1 })

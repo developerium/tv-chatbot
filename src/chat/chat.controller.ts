@@ -3,21 +3,30 @@ import {
   ConflictException,
   Controller,
   GatewayTimeoutException,
+  Get,
   NotFoundException,
   Param,
   Post,
+  Query,
   ServiceUnavailableException,
 } from '@nestjs/common'
 
+import type { Paginated } from '../common/pagination/paginated.js'
 import type { ChatCreatedDto } from './chat-created.dto.js'
+import type { ChatSummaryDto } from './chat-summary.dto.js'
 import type { MessageSentDto } from './message-sent.dto.js'
 
+import {
+  type PaginationQueryDto,
+  paginationQuerySchema,
+} from '../common/pagination/pagination-query.dto.js'
 import { UserId } from '../common/user-id.decorator.js'
 import { ChatConcurrencyError } from '../storage/chat-concurrency.error.js'
 import { AssistantUnavailableError } from './assistant-unavailable.error.js'
 import { chatIdSchema } from './chat-id.schema.js'
 import { ChatService } from './chat.service.js'
 import { type SendMessageDto, sendMessageSchema } from './send-message.dto.js'
+import { toChatSummaryDto } from './to-chat-summary-dto.js'
 import { toMessageDto } from './to-message-dto.js'
 import { TurnTimeoutError } from './turn-timeout.error.js'
 
@@ -31,6 +40,20 @@ export class ChatController {
     const chat = await this.chatService.createChat(userId)
 
     return { createdAt: chat.createdAt.toISOString(), id: chat.id }
+  }
+
+  // Lists the current user's chats, newest first, without their messages.
+  @Get()
+  async listChats(
+    @Query({ schema: paginationQuerySchema }) query: PaginationQueryDto,
+    @UserId() userId: string,
+  ): Promise<Paginated<ChatSummaryDto>> {
+    const page = await this.chatService.listChats(userId, query)
+
+    return {
+      items: page.items.map((chat) => toChatSummaryDto(chat)),
+      nextCursor: page.nextCursor,
+    }
   }
 
   // Runs one agent turn and returns the saved question and answer.
