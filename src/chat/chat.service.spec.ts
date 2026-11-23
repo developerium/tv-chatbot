@@ -75,7 +75,7 @@ function createService(
   const agent = { chat: vi.fn(agentChat) }
   const config = new ConfigService({ AGENT_TURN_TIMEOUT_MS: '50' })
   const service = new ChatService(
-    repository,
+    repository as unknown as ChatRepository,
     agent as unknown as AgentService,
     config,
   )

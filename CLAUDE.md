@@ -14,7 +14,7 @@ Docker Compose, Vitest.
 - Grounding is the core requirement. Never add code paths that let the LLM
   recommend series that no TVDB tool returned.
 - Tools return compact summaries, never raw TVDB payloads.
-- Storage goes through the `ChatRepository` and `TvdbCache` interfaces.
+- Storage goes through the `ChatRepository` and `TvdbCache` classes.
 - Follow the NestJS layers: controllers validate the request and handle
   auth, services hold business logic, repositories  access data sources.
   Calls go controller → service → repository; no business logic in controllers, 
@@ -32,7 +32,7 @@ Docker Compose, Vitest.
 - Observability goes through Sentry. Never send chat text, prompts, model
   output or secrets to Sentry; use ids, counts and lengths instead.
 - MongoDB access uses Mongoose (`@nestjs/mongoose`), only inside the
-  `ChatRepository` and `TvdbCache` implementations.
+  `ChatRepository` and `TvdbCache` classes.
 - Entities, DTOs and API responses expose `id` (string), never `_id` or
   `__v`; map `_id` to `id` at the store boundary (see "Mongoose
   conventions" in ARCHITECTURE.md).

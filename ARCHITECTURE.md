@@ -169,8 +169,8 @@ differs per entry.
 - `freshUntil` decides hits; the TTL index is on `deleteAfter`
   (`freshUntil` + stale grace), so stale entries survive to be served
   when TVDB fails.
-- Layers: tool → TVDB client → `TvdbCache` (`get`, `getStale`, `set`) →
-  `MongoTvdbCache`.
+- Layers: tool → TVDB client → `TvdbCache` (`get`, `getStale`, `set`,
+  backed by Mongoose).
 
 | Group | Requests | Default TTL | Config |
 | --- | --- | --- | --- |

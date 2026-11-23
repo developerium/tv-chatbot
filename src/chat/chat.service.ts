@@ -1,4 +1,4 @@
-import { Inject, Injectable, Logger } from '@nestjs/common'
+import { Injectable, Logger } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { randomUUID } from 'node:crypto'
 
@@ -10,10 +10,7 @@ import type { MessageExchange } from './message-exchange.js'
 import type { SendMessageDto } from './send-message.dto.js'
 
 import { AgentService } from '../agent/agent.service.js'
-import {
-  CHAT_REPOSITORY,
-  type ChatRepository,
-} from '../storage/chat.repository.js'
+import { ChatRepository } from '../storage/chat.repository.js'
 import { AssistantUnavailableError } from './assistant-unavailable.error.js'
 import { TurnTimeoutError } from './turn-timeout.error.js'
 
@@ -23,7 +20,7 @@ export class ChatService {
   private readonly turnTimeoutMs: number
 
   constructor(
-    @Inject(CHAT_REPOSITORY) private readonly chatRepository: ChatRepository,
+    private readonly chatRepository: ChatRepository,
     private readonly agentService: AgentService,
     config: ConfigService,
   ) {
