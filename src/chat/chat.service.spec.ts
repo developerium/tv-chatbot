@@ -94,6 +94,22 @@ describe('ChatService.listChats', () => {
   })
 })
 
+describe('ChatService.getChat', () => {
+  it("returns the user's chat with its messages", async () => {
+    const chat = chatWith([question, answer])
+    const { repository, service } = createService(chat)
+
+    await expect(service.getChat('chat-1', 'user-1')).resolves.toBe(chat)
+    expect(repository.findById).toHaveBeenCalledWith('chat-1', 'user-1')
+  })
+
+  it('returns null when the user has no such chat', async () => {
+    const { service } = createService(null)
+
+    await expect(service.getChat('chat-1', 'user-1')).resolves.toBeNull()
+  })
+})
+
 describe('ChatService.sendMessage', () => {
   it('saves the question, then the answer with its sources', async () => {
     const { agent, repository, service } = createService(chatWith([]))

@@ -17,11 +17,13 @@ describe('ChatController', () => {
   let app: INestApplication
   const createChat = vi.fn()
   const listChats = vi.fn()
+  const getChat = vi.fn()
   const sendMessage = vi.fn()
 
   beforeEach(async () => {
     createChat.mockReset()
     listChats.mockReset()
+    getChat.mockReset()
     sendMessage.mockReset()
 
     const module = await Test.createTestingModule({
@@ -29,7 +31,7 @@ describe('ChatController', () => {
       providers: [
         {
           provide: ChatService,
-          useValue: { createChat, listChats, sendMessage },
+          useValue: { createChat, getChat, listChats, sendMessage },
         },
       ],
     }).compile()
@@ -116,6 +118,57 @@ describe('ChatController', () => {
         .expect(400)
 
       expect(listChats).not.toHaveBeenCalled()
+    })
+  })
+
+  describe('GET /api/chat/:id', () => {
+    const question = {
+      createdAt: new Date('2026-11-09T10:00:00Z'),
+      id: randomUUID(),
+      role: 'user',
+      status: 'complete',
+      text: 'Like Breaking Bad',
+    }
+    const answer = {
+      createdAt: new Date('2026-11-09T10:00:05Z'),
+      id: randomUUID(),
+      kind: 'answer',
+      replyTo: question.id,
+      role: 'assistant',
+      sources: [],
+      status: 'complete',
+      text: 'Try Better Call Saul.',
+    }
+
+    it('returns the chat with all its messages and only public fields', async () => {
+      getChat.mockResolvedValue({ ...summary, messages: [question, answer] })
+
+      const response = await request(app.getHttpServer())
+        .get(`/api/chat/${chat.id}`)
+        .expect(200)
+
+      expect(getChat).toHaveBeenCalledWith(chat.id, PLACEHOLDER_USER_ID)
+      expect(response.body).toEqual({
+        createdAt: '2026-11-09T10:00:00.000Z',
+        id: chat.id,
+        messages: [
+          { ...question, createdAt: '2026-11-09T10:00:00.000Z' },
+          { ...answer, createdAt: '2026-11-09T10:00:05.000Z' },
+        ],
+        updatedAt: '2026-11-09T10:05:00.000Z',
+      })
+    })
+
+    it('returns 404 for an unknown chat', async () => {
+      getChat.mockResolvedValue(null)
+
+      await request(app.getHttpServer()).get(`/api/chat/${chat.id}`).expect(404)
+    })
+
+    it('rejects a chat id that is not a UUID with 400', async () => {
+      await request(app.getHttpServer()).get('/api/chat/not-a-uuid').expect(400)
+
+      expect(getChat).not.toHaveBeenCalled()
     })
   })
 

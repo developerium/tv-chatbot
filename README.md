@@ -38,6 +38,9 @@ curl -X POST http://127.0.0.1:8080/api/chat
 # `cursor` for the next page.
 curl 'http://127.0.0.1:8080/api/chat?limit=20'
 
+# One chat with all its messages, oldest first.
+curl http://127.0.0.1:8080/api/chat/<chat id>
+
 curl -X POST http://127.0.0.1:8080/api/chat/<chat id>/message \
   -H 'Content-Type: application/json' \
   -d '{ "text": "I liked the main cast of Breaking Bad, what else are they in?" }'

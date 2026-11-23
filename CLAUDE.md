@@ -21,7 +21,9 @@ Docker Compose, Vitest.
   no database access in services.
 - Every listing endpoint is paginated with the shared mechanism
   (`PaginationQueryDto`, `Paginated<T>`, generic `paginate` helper; see
-  ARCHITECTURE.md). Never write endpoint-specific paging code.
+  ARCHITECTURE.md). Never write endpoint-specific paging code. The one
+  exception: `GET /api/chat/:id` returns a chat with all its messages,
+  unpaginated, because messages are embedded in the chat document.
 - Outbound calls (TVDB, OpenAI API) use the shared retry helper or the
   SDK's configured retries; never write ad-hoc retry loops or retry
   non-retryable 4xx errors.

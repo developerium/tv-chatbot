@@ -19,8 +19,8 @@ flowchart LR
 
 Built (read the code for details):
 
-- `src/chat`: `POST /api/chat`, `GET /api/chat`, `POST
-  /api/chat/:id/message` with `clientId` deduplication
+- `src/chat`: `POST /api/chat`, `GET /api/chat`, `GET /api/chat/:id`,
+  `POST /api/chat/:id/message` with `clientId` deduplication
 - `src/agent`: OpenAI Agents SDK run with a structured final answer
   (`kind`, `message`, `sources`), grounding check with one correction round,
   fixed off-topic reply, history limit, turn deadline
@@ -34,7 +34,7 @@ Built (read the code for details):
   `InternalErrorFilter`, request logging
 - Limits and their defaults: `.env.example`
 
-Not built yet: the other `GET` endpoints and `DELETE`, `TvdbCache`,
+Not built yet: `DELETE`, `TvdbCache`,
 preferences, `summary`, `recommendations` and `metadata` on messages,
 storing failed turns, the tool-free last step, Sentry, rate limiting on our
 own API, grounding tests. Their design is below.
@@ -48,8 +48,7 @@ own API, grounding tests. Their design is below.
 | `POST /api/chat` | `201 { id, createdAt }` | Built |
 | `POST /api/chat/:id/message` | `{ userMessage, assistantMessage }` | Built |
 | `GET /api/chat` | `Paginated<ChatSummaryDto>` (`id`, timestamps, no messages), newest by `createdAt` first | Built |
-| `GET /api/chat/:id` | `ChatDto` (preferences, timestamps, no messages) | Planned |
-| `GET /api/chat/:id/message` | `Paginated<MessageDto>`, newest first | Planned |
+| `GET /api/chat/:id` | `ChatDto` (`id`, timestamps, all messages oldest first, not paginated; preferences planned) | Built |
 | `DELETE /api/chat/:id` | `204` | Planned |
 
 - A chat owned by another user returns `404`, not `403`, so its existence
@@ -58,8 +57,7 @@ own API, grounding tests. Their design is below.
   chat"): with the placeholder user id every request looks like the same
   user, so a guess would mix conversations.
 - Plain REST, no streaming. If the client disconnects, the turn still
-  completes and is saved; the client recovers it via
-  `GET /api/chat/:id/message`. SSE can be added in the controller later
+  completes and is saved; the client recovers it via `GET /api/chat/:id`. SSE can be added in the controller later
   without touching services.
 - Retry rules for a repeated `clientId`: answer saved → return it; turn
   still running → say so; previous answer `failed` (planned) → rerun the
@@ -67,7 +65,11 @@ own API, grounding tests. Their design is below.
 
 ### Pagination
 
-One mechanism for every listing endpoint:
+One mechanism for every listing endpoint. A chat's messages are the
+exception: `GET /api/chat/:id` returns them all. They are embedded in the
+chat document, which is read whole on every turn anyway, so paging would
+not save database work, only complicate clients. MongoDB's 16 MB document
+limit is the only cap on a chat's size.
 
 - `PaginationQueryDto` (`limit` 1-100, default 20, opaque `cursor`), `Paginated<T>`
   (`{ items, nextCursor }`, `null` on the last page) and cursor
@@ -79,8 +81,8 @@ One mechanism for every listing endpoint:
   Sort fields are Dates and must not change after creation (`createdAt`,
   not `updatedAt`), or items would move between pages.
 - Keyset pagination: sort on the field plus `_id` as tie-breaker, fetch
-  `limit + 1` to detect a next page. It stays correct while new chats and
-  messages arrive and uses an index instead of skipping.
+  `limit + 1` to detect a next page. It stays correct while new chats
+  arrive and uses an index instead of skipping.
 - The cursor comes from the client: decoding checks shape and value types
   before it reaches a query; a bad cursor is a `400`.
 

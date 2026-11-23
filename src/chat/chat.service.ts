@@ -48,6 +48,11 @@ export class ChatService {
     return this.chatRepository.listByUser(userId, page)
   }
 
+  // A chat with all its messages. Returns null if the user has no such chat.
+  async getChat(chatId: string, userId: string): Promise<ChatEntity | null> {
+    return this.chatRepository.findById(chatId, userId)
+  }
+
   // Runs one agent turn. Returns null if the user has no such chat.
   // A repeated clientId returns the saved answer instead of a new turn.
   async sendMessage(

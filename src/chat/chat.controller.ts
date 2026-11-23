@@ -14,6 +14,7 @@ import {
 import type { Paginated } from '../common/pagination/paginated.js'
 import type { ChatCreatedDto } from './chat-created.dto.js'
 import type { ChatSummaryDto } from './chat-summary.dto.js'
+import type { ChatDto } from './chat.dto.js'
 import type { MessageSentDto } from './message-sent.dto.js'
 
 import {
@@ -26,6 +27,7 @@ import { AssistantUnavailableError } from './assistant-unavailable.error.js'
 import { chatIdSchema } from './chat-id.schema.js'
 import { ChatService } from './chat.service.js'
 import { type SendMessageDto, sendMessageSchema } from './send-message.dto.js'
+import { toChatDto } from './to-chat-dto.js'
 import { toChatSummaryDto } from './to-chat-summary-dto.js'
 import { toMessageDto } from './to-message-dto.js'
 import { TurnTimeoutError } from './turn-timeout.error.js'
@@ -54,6 +56,23 @@ export class ChatController {
       items: page.items.map((chat) => toChatSummaryDto(chat)),
       nextCursor: page.nextCursor,
     }
+  }
+
+  // Returns a chat with all its messages, oldest first. Not paginated:
+  // messages live inside the chat document, which is always read whole.
+  @Get(':id')
+  async getChat(
+    @Param('id', { schema: chatIdSchema }) chatId: string,
+    @UserId() userId: string,
+  ): Promise<ChatDto> {
+    const chat = await this.chatService.getChat(chatId, userId)
+
+    // Unknown chats and other users' chats look the same.
+    if (!chat) {
+      throw new NotFoundException('Chat not found')
+    }
+
+    return toChatDto(chat)
   }
 
   // Runs one agent turn and returns the saved question and answer.

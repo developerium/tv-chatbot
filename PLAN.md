@@ -30,7 +30,7 @@ Stretch goal: long-term memory across chats.
 | Chats kept until deleted; only the cache expires | Conversations stay recoverable and usable for long-term memory |
 | Plain REST, no streaming | Simplest to build and test; SSE is the next step for 10-30 s turns |
 | Chat id explicit in the URL | With a placeholder user id, inferring "the latest chat" would mix conversations |
-| Cursor (keyset) pagination, one shared mechanism | Correct while new messages arrive; one request/response shape for clients |
+| Cursor (keyset) pagination, one shared mechanism; a chat's messages are returned whole | Correct while new items arrive; one request/response shape for clients. Messages are embedded in the chat document, so paging them saves no database work |
 | Topic restriction with a fixed `off_topic` reply | Keeps the bot on purpose; off-topic content can't be generated |
 | Layered prompt injection defences | No single filter works; limiting what the model can do limits the damage |
 | Sentry for observability | Errors and tracing in one tool, with a NestJS SDK |
